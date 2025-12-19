@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
+  </script>
 </head>
 <body>
 
   <nav class="navbar">
     <img src="images/rs-logo.jpeg" alt="R&S Ali Construction Logo" class="nav-logo">
-    <ul class="nav-links">
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About Us</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="media.html">Media</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20for%20Quote" class="quote-btn">Request a Quote</a>
   </nav>
 
   <section>
@@ -26,6 +32,10 @@
   </section>
 
   <footer>
+    <p><strong>Address:</strong> #53B Sookoo Trace, Ceder Hill Road, Claxton Bay</p>
+    <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
+    <p><strong>Phone:</strong> 1-868-352-0450 / 1-868-321-7018</p>
+    <p><strong>Social:</strong> Facebook, Instagram & TikTok — <em>R&S Stucco</em></p>
     <p>&copy; 2025 R&S Ali Construction Ltd.</p>
   </footer>
 
