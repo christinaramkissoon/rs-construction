@@ -1,5 +1,4 @@
 /* General */
-* { box-sizing: border-box; }
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -30,6 +29,13 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+.nav-links a.active {
+  color: #d4af37; /* gold highlight */
+}
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #d4af37;
+}
 .quote-btn {
   background: #d4af37;
   color: #000;
@@ -39,7 +45,22 @@ body {
   font-weight: bold;
 }
 
-/* Sections and typography */
+/* Hero banner */
+.hero {
+  background: url("images/hero.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2em;
+}
+
+/* Sections */
 section {
   max-width: 900px;
   margin: 40px auto;
@@ -58,18 +79,6 @@ footer {
   padding: 15px;
 }
 
-/* Simple gallery placeholder */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-.gallery img {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .navbar {
@@ -85,8 +94,7 @@ footer {
     align-self: stretch;
     text-align: center;
   }
-  section {
-    margin: 24px auto;
-    padding: 16px;
+  .hero {
+    padding: 60px 20px;
   }
 }
