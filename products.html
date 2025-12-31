@@ -14,6 +14,32 @@
       document.getElementById('sidebar').classList.remove('show');
       document.getElementById('overlay').classList.remove('show');
     }
+
+    // Products: toggle descriptions on click and keyboard
+    document.addEventListener('DOMContentLoaded', function () {
+      const cards = document.querySelectorAll('.product-card');
+
+      function toggleCard(card) {
+        const isOpen = card.classList.contains('open');
+        cards.forEach(c => c.classList.remove('open'));
+        if (!isOpen) card.classList.add('open');
+        const btn = card.querySelector('[aria-expanded]');
+        if (btn) btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      }
+
+      cards.forEach(card => {
+        card.addEventListener('click', function (e) {
+          if (e.target.tagName.toLowerCase() === 'a') return;
+          toggleCard(card);
+        });
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleCard(card);
+          }
+        });
+      });
+    });
   </script>
 </head>
 <body>
@@ -36,17 +62,14 @@
       <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
     </ul>
     <div class="social">
-      <!-- Facebook -->
       <a href="https://www.facebook.com/rs.stucco" aria-label="Facebook">
-        <!-- svg omitted for brevity -->
+        <!-- svg icon -->
       </a>
-      <!-- Instagram -->
       <a href="https://www.instagram.com/r_s_stucco" aria-label="Instagram">
-        <!-- svg omitted for brevity -->
+        <!-- svg icon -->
       </a>
-      <!-- TikTok -->
       <a href="https://www.tiktok.com/@r_s_stucco?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
-        <!-- svg omitted for brevity -->
+        <!-- svg icon -->
       </a>
     </div>
   </aside>
@@ -55,48 +78,168 @@
   <!-- Hero -->
   <section class="hero" style="background: url('images/project-house4.jpeg') center/cover no-repeat;">
     <h1>Our Products</h1>
-    <p>Coming Soon - check back for updates!</p>
+    <p>Quality materials for superior finishes and durable builds.</p>
     <a href="contact.html" class="quote-btn">Request a Quote</a>
   </section>
 
   <!-- Content -->
   <main>
     <section>
-      <h2>Product showcase</h2>
-      <p class="lead">We’re preparing our product catalog. Stay tuned for details on stucco mixes, mouldings, and more.</p>
-    </section>
-  </main>
+      <h2>Product catalog</h2>
+      <p class="lead">Click or tap a product to view its description.</p>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-block">
-        <h3>Contact us</h3>
-        <div class="footer-contact">
-          <p><strong>Phone:</strong></p>
-          <p>1-868-352-0450</p>
-          <p>1-868-321-7018</p>
-          <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
-        </div>
-      </div>
-      <div class="footer-block">
-        <h3>Address</h3>
-        <div class="footer-contact">
-          <p>#53B Sookoo Trace, Ceder Hill Road</p>
-          <p>Claxton Bay</p>
-        </div>
-      </div>
-      <div class="footer-block">
-        <h3>Hours</h3>
-        <div class="footer-hours">
-          <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
-          <p>Sat: 8:00 AM - 1:00 PM</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+      <div class="products-grid">
+        <!-- Decorative Coating -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Decorative Coating" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-decocoat.jpg" alt="Decorative coating">
+          <div class="product-meta">
+            <div class="product-title">Decorative Coating</div>
+            <div class="product-subtitle">Acrylic, fine aggregate — interior/exterior</div>
+          </div>
+          <div class="product-desc">
+            <p>Acrylic decorative coating with fine aggregate for interior/exterior walls.</p>
+          </div>
+        </article>
+
+        <!-- Textured Sand Finish (Fine) -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Fine" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-essence-fine-sand.jpg" alt="Textured sand finish fine">
+          <div class="product-meta">
+            <div class="product-title">Textured Sand Finish</div>
+            <div class="product-subtitle">Smooth fine-grain acrylic — exterior</div>
+          </div>
+          <div class="product-desc">
+            <p>Smooth fine-grain acrylic finish for exterior walls.</p>
+          </div>
+        </article>
+
+        <!-- Textured Sand Finish (Medium) -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Medium" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-essence-medium-sand.jpg" alt="Textured sand finish medium">
+          <div class="product-meta">
+            <div class="product-title">Textured Sand Finish</div>
+            <div class="product-subtitle">Medium-grain acrylic — more texture</div>
+          </div>
+          <div class="product-desc">
+            <p>Medium-grain acrylic finish for more texture.</p>
+          </div>
+        </article>
+
+        <!-- Textured Sand Finish (Swirl) -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Swirl" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-essence-swirl.jpg" alt="Swirled acrylic finish">
+          <div class="product-meta">
+            <div class="product-title">Textured Sand Finish</div>
+            <div class="product-subtitle">Swirled acrylic — decorative exterior</div>
+          </div>
+          <div class="product-desc">
+            <p>Swirled acrylic finish for decorative exterior surfaces.</p>
+          </div>
+        </article>
+
+        <!-- Granite-Look Finish -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Granite-Look Finish" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-granite.jpg" alt="Granite-look acrylic finish">
+          <div class="product-meta">
+            <div class="product-title">Granite-Look Finish</div>
+            <div class="product-subtitle">Lightweight acrylic — polished granite look</div>
+          </div>
+          <div class="product-desc">
+            <p>Lightweight acrylic finish mimicking polished granite.</p>
+          </div>
+        </article>
+
+        <!-- Lux / Reflective Finish -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Lux Reflective Finish" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-lux.jpg" alt="Lux reflective finish">
+          <div class="product-meta">
+            <div class="product-title">Lux / Reflective Finish</div>
+            <div class="product-subtitle">Lustrous acrylic with reflective particles</div>
+          </div>
+          <div class="product-desc">
+            <p>Lustrous acrylic finish with reflective particles.</p>
+          </div>
+        </article>
+
+        <!-- Acrylic Wall Finish (Stolit 1.0, 1.5) -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Acrylic Wall Finish Stolit" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/stolit-1-0.jpg" alt="Acrylic wall finish stolit">
+          <div class="product-meta">
+            <div class="product-title">Acrylic Wall Finish</div>
+            <div class="product-subtitle">Standard textured — multiple grains</div>
+          </div>
+          <div class="product-desc">
+            <p>Standard acrylic textured finishes in different grain sizes.</p>
+            <p><strong>Variants:</strong> stolit-1-0.jpg, stolit-1-5.jpg</p>
+          </div>
+        </article>
+
+        <!-- Acrylic Wall Finish (Freeform) -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Acrylic Wall Finish Freeform" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/stolit-freeform.jpg" alt="Acrylic wall finish freeform">
+          <div class="product-meta">
+            <div class="product-title">Acrylic Wall Finish</div>
+            <div class="product-subtitle">Freeform textured — creative surfaces</div>
+          </div>
+          <div class="product-desc">
+            <p>Freeform textured finish for creative surfaces.</p>
+          </div>
+        </article>
+
+        <!-- Self-Cleaning Finish (Lotusan) -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Self-Cleaning Finish Lotusan" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/lotusan-1-0.jpg" alt="Self-cleaning finish lotusan">
+          <div class="product-meta">
+            <div class="product-title">Self-Cleaning Finish</div>
+            <div class="product-subtitle">Lotus-effect — dirt repellent, water shedding</div>
+          </div>
+          <div class="product-desc">
+            <p>Lotus-effect technology: dirt-repellent, water-shedding finishes.</p>
+            <p><strong>Variants:</strong> lotusan-1-0.jpg, lotusan-1-5.jpg, lotusan-freeform.jpg</p>
+          </div>
+        </article>
+
+        <!-- Acrylic Wall Finish (Coarse R1.5) -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Acrylic Wall Finish R1.5" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-r1-5.jpg" alt="Coarse-grain acrylic finish">
+          <div class="product-meta">
+            <div class="product-title">Acrylic Wall Finish</div>
+            <div class="product-subtitle">Coarse-grain acrylic — bold texture</div>
+          </div>
+          <div class="product-desc">
+            <p>Coarse-grain acrylic finish for bold texture.</p>
+          </div>
+        </article>
+
+        <!-- Antique/Mottled Coating -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Antique Mottled Coating" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-tique.jpg" alt="Antique mottled coating">
+          <div class="product-meta">
+            <div class="product-title">Antique/Mottled Coating</div>
+            <div class="product-subtitle">Antiqued/mottled effect over finishes</div>
+          </div>
+          <div class="product-desc">
+            <p>Creates antiqued or mottled appearance over finishes.</p>
+          </div>
+        </article>
+
+        <!-- Reinforcement Mesh -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Reinforcement Mesh" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/sto-mesh.jpg" alt="Reinforcement mesh">
+          <div class="product-meta">
+            <div class="product-title">Reinforcement Mesh</div>
+            <div class="product-subtitle">Glass fiber mesh — impact resistance</div>
+          </div>
+          <div class="product-desc">
