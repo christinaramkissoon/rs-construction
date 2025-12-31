@@ -15,10 +15,9 @@
       document.getElementById('overlay').classList.remove('show');
     }
 
-    // Products: toggle descriptions on click and keyboard
+    // Products: toggle descriptions
     document.addEventListener('DOMContentLoaded', function () {
       const cards = document.querySelectorAll('.product-card');
-
       function toggleCard(card) {
         const isOpen = card.classList.contains('open');
         cards.forEach(c => c.classList.remove('open'));
@@ -26,7 +25,6 @@
         const btn = card.querySelector('[aria-expanded]');
         if (btn) btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
       }
-
       cards.forEach(card => {
         card.addEventListener('click', function (e) {
           if (e.target.tagName.toLowerCase() === 'a') return;
@@ -61,11 +59,6 @@
       <li><a href="about.html" onclick="closeSidebar()">About Us</a></li>
       <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
     </ul>
-    <div class="social">
-      <a href="https://www.facebook.com/rs.stucco" aria-label="Facebook"></a>
-      <a href="https://www.instagram.com/r_s_stucco" aria-label="Instagram"></a>
-      <a href="https://www.tiktok.com/@r_s_stucco?is_from_webapp=1&sender_device=pc" aria-label="TikTok"></a>
-    </div>
   </aside>
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
@@ -86,10 +79,10 @@
         <!-- Decorative Coating -->
         <article class="product-card" role="button" tabindex="0" aria-label="Decorative Coating" aria-expanded="false">
           <span class="product-hint">Click to view</span>
-          <img src="images/sto-decocoat.jpg" alt="Decorative coating">
+          <img src="images/decocoat.jpg" alt="Decorative coating">
           <div class="product-meta">
             <div class="product-title">Decorative Coating</div>
-            <div class="product-subtitle">Acrylic, fine aggregate - interior/exterior</div>
+            <div class="product-subtitle">Acrylic, fine aggregate — interior/exterior</div>
           </div>
           <div class="product-desc">
             <p>Acrylic decorative coating with fine aggregate for interior/exterior walls.</p>
@@ -99,10 +92,10 @@
         <!-- Textured Sand Finish (Fine) -->
         <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Fine" aria-expanded="false">
           <span class="product-hint">Click to view</span>
-          <img src="images/sto-essence-fine-sand.jpg" alt="Textured sand finish fine">
+          <img src="images/fine-sand.jpg" alt="Fine sand finish">
           <div class="product-meta">
             <div class="product-title">Textured Sand Finish</div>
-            <div class="product-subtitle">Smooth fine-grain acrylic - exterior</div>
+            <div class="product-subtitle">Smooth fine-grain acrylic — exterior</div>
           </div>
           <div class="product-desc">
             <p>Smooth fine-grain acrylic finish for exterior walls.</p>
@@ -112,10 +105,10 @@
         <!-- Textured Sand Finish (Medium) -->
         <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Medium" aria-expanded="false">
           <span class="product-hint">Click to view</span>
-          <img src="images/sto-essence-medium-sand.jpg" alt="Textured sand finish medium">
+          <img src="images/medium-sand.jpg" alt="Medium sand finish">
           <div class="product-meta">
             <div class="product-title">Textured Sand Finish</div>
-            <div class="product-subtitle">Medium-grain acrylic - more texture</div>
+            <div class="product-subtitle">Medium-grain acrylic — more texture</div>
           </div>
           <div class="product-desc">
             <p>Medium-grain acrylic finish for more texture.</p>
@@ -125,10 +118,10 @@
         <!-- Textured Sand Finish (Swirl) -->
         <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Swirl" aria-expanded="false">
           <span class="product-hint">Click to view</span>
-          <img src="images/sto-essence-swirl.jpg" alt="Swirled acrylic finish">
+          <img src="images/swirl.jpg" alt="Swirled finish">
           <div class="product-meta">
             <div class="product-title">Textured Sand Finish</div>
-            <div class="product-subtitle">Swirled acrylic - decorative exterior</div>
+            <div class="product-subtitle">Swirled acrylic — decorative exterior</div>
           </div>
           <div class="product-desc">
             <p>Swirled acrylic finish for decorative exterior surfaces.</p>
@@ -138,10 +131,10 @@
         <!-- Granite-Look Finish -->
         <article class="product-card" role="button" tabindex="0" aria-label="Granite-Look Finish" aria-expanded="false">
           <span class="product-hint">Click to view</span>
-          <img src="images/sto-granite.jpg" alt="Granite-look acrylic finish">
+          <img src="images/granite.jpg" alt="Granite-look finish">
           <div class="product-meta">
             <div class="product-title">Granite-Look Finish</div>
-            <div class="product-subtitle">Lightweight acrylic - polished granite look</div>
+            <div class="product-subtitle">Lightweight acrylic — polished granite look</div>
           </div>
           <div class="product-desc">
             <p>Lightweight acrylic finish mimicking polished granite.</p>
@@ -151,7 +144,7 @@
         <!-- Lux / Reflective Finish -->
         <article class="product-card" role="button" tabindex="0" aria-label="Lux Reflective Finish" aria-expanded="false">
           <span class="product-hint">Click to view</span>
-          <img src="images/sto-lux.jpg" alt="Lux reflective finish">
+          <img src="images/lux.jpg" alt="Lux reflective finish">
           <div class="product-meta">
             <div class="product-title">Lux / Reflective Finish</div>
             <div class="product-subtitle">Lustrous acrylic with reflective particles</div>
@@ -164,10 +157,21 @@
         <!-- Acrylic Wall Finish (Grouped Variants) -->
         <article class="product-card" role="button" tabindex="0" aria-label="Acrylic Wall Finish" aria-expanded="false">
           <span class="product-hint">Click to view</span>
-          <img src="images/stolit-1-0.jpg" alt="Acrylic wall finish sample">
+          <img src="images/1-0.jpg" alt="Acrylic wall finish sample">
           <div class="product-meta">
             <div class="product-title">Acrylic Wall Finish</div>
             <div class="product-subtitle">Multiple textures and grains</div>
           </div>
           <div class="product-desc">
             <p>Standard and creative acrylic textured finishes available in different grain sizes.</p>
+            <div class="variant-list">
+              <figure><img src="images/1-0.jpg" alt="Variant 1.0"><figcaption>1.0 — fine grain</figcaption></figure>
+              <figure><img src="images/1-5.jpg" alt="Variant 1.5"><figcaption>1.5 — medium grain</figcaption></figure>
+              <figure><img src="images/freeform.jpg" alt="Variant Freeform"><figcaption>Freeform — creative surfaces</figcaption></figure>
+              <figure><img src="images/r1-5.jpg" alt="Variant Coarse R1.5"><figcaption>Coarse R1.5 — bold texture</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Self-Cleaning Finish (Grouped Variants) -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Self
