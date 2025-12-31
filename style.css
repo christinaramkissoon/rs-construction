@@ -11,7 +11,13 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
   padding: 10px 20px;
   position: relative;
 }
-.nav-logo { max-width: 100px; }
+.nav-logo {
+  max-width: 100px;
+  border-radius: 50%;
+  display: block;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  will-change: transform;
+}
 .nav-toggle {
   display: none;
   font-size: 24px;
@@ -23,6 +29,23 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
 .nav-links a { color: #fff; text-decoration: none; font-weight: bold; }
 .nav-links a.active { color: #d4af37; }
 .nav-links a:hover { text-decoration: underline; color: #d4af37; }
+
+/* Spin on hover */
+.nav-logo:hover {
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav-logo { transition: none; }
+  .nav-logo:hover {
+    animation: none;
+    transform: scale(1.03);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+  }
+}
 
 /* Mobile nav */
 @media (max-width: 768px) {
