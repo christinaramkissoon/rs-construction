@@ -174,14 +174,77 @@ section .lead {
   margin-bottom: 10px;
 }
 
-/* ✅ Consistent image sizing */
+/* ✅ Consistent image sizing for cards */
 .gallery img,
-.services-grid img {
+.services-grid img,
+.products-grid img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: 6px;
   display: block;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.product-card {
+  background: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+.product-meta {
+  padding: 12px 14px;
+  border-top: 1px solid #eee;
+}
+.product-title {
+  font-size: 1.05em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.product-subtitle {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Expandable description */
+.product-desc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 14px;
+  border-top: 1px solid #eee;
+}
+.product-card.open .product-desc {
+  max-height: 220px; /* enough space for 6–8 lines */
+  padding: 12px 14px;
+}
+.product-desc p {
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+
+/* Toggle hint badge */
+.product-hint {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(212,175,55,0.95); /* gold */
+  color: #111;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  border-radius: 12px;
 }
 
 /* Footer */
@@ -225,5 +288,9 @@ section .lead {
   .hero .quote-btn {
     padding: 10px 20px;
     font-size: 0.9em;
+  }
+
+  .product-card.open .product-desc {
+    max-height: 300px; /* allow more space on mobile */
   }
 }
