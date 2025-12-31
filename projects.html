@@ -5,22 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css">
-  <script>function toggleMenu(){document.getElementById("mobileMenu").classList.toggle("show");}</script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    }
+  </script>
 </head>
 <body>
 
-  <nav class="navbar">…Projects link active…</nav>
-  <div class="mobile-menu" id="mobileMenu">…Projects link active…</div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images/rs-logo-new.png" alt="R&S Ali Construction Logo" class="nav-logo">
+    </div>
+    <div class="nav-center">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20for%20Quote" class="quote-btn">Request a Quote</a>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
   <section class="hero">
     <h1>Our Projects</h1>
     <p>Showcasing our work across Trinidad, Tobago, and Guyana.</p>
     <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20for%20Quote" class="quote-btn">Request a Quote</a>
   </section>
 
+  <!-- Buildings -->
   <section>
     <h2>Buildings</h2>
     <div class="gallery">
-      <figure><img src="images/project-building1.jpeg" alt="Building 1"><figcaption>Commercial building project 1</figcaption></figure>
-      <figure><img src="images/project-building2.jpeg" alt="Building 2"><figcaption>Commercial building project 2</figcaption></figure>
-      <figure><img src="images/project-building4.jpeg" alt="Building 4"><figcaption>Commercial building project 4</figcaption
+      <figure><img src="images/project-building1.jpeg" alt="Building project 1"><figcaption>Commercial building project 1</figcaption></figure>
+      <figure><img src="images/project-building2.jpeg" alt="Building project 2"><figcaption>Commercial building project 2</figcaption></figure>
+      <figure><img src="images/project-building4.jpeg" alt="Building project 4"><figcaption>Commercial building project 4</figcaption></figure>
+      <figure><img src="images/project-building5.jpeg" alt="Building project 5"><figcaption>Commercial building project 5</figcaption></figure>
+      <figure><img src="images/project-building6.jpeg" alt="Building project 6"><figcaption>Commercial building project 6</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Houses -->
+  <section>
+    <h2>Houses</h2>
+    <div class="gallery">
+      <figure><img src="images/project-house1.jpeg" alt="House project 1"><figcaption>Residential house project 1</figcaption></figure>
+      <figure><img src="images/project-house2.jpeg" alt="House project 2"><figcaption>Residential house project 2</figcaption></figure>
+      <figure><img src="images/project-house3.jpeg" alt="House project 3"><figcaption>Residential house project 3</figcaption></figure>
+      <figure><img src="images/project-house4.jpeg" alt="House project 4"><figcaption>Residential house project 4</figcaption></figure>
+      <figure><img src="images/project-house5.jpeg" alt="House project 5"><figcaption>Residential house project 5</figcaption></figure>
+      <figure><img src="images/project-house6.jpeg" alt="House project 6"><figcaption>Residential house project 6</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Interiors -->
+  <section>
+    <h2>Interiors</h2>
+    <div class="gallery">
+      <figure><img src="images/project-indoors1.jpeg" alt="Interior project 1"><figcaption>Interior design project 1</figcaption></figure>
+      <figure><img src="images/project-indoors2.jpeg" alt="Interior project 2"><figcaption>Interior design project 2</figcaption></figure>
+      <figure><img src="images/project-indoors3.jpeg" alt="Interior project 3"><figcaption>Interior design project 3</figcaption></figure>
+      <figure><img src="images/project-indoors4.jpeg" alt="Interior project 4"><figcaption>Interior design project 4</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Roofing -->
+  <section>
+    <h2>Roofing</h2>
+    <div class="gallery">
+      <figure><img src="images/project-roof1.jpeg" alt="Roofing project"><figcaption>Roofing project — aerial view</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
