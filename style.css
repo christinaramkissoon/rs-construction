@@ -10,6 +10,7 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
   background: #222;
   padding: 10px 20px;
   position: relative;
+  perspective: 800px; /* enables 3D look for rotateY */
 }
 .nav-logo {
   max-width: 100px;
@@ -17,6 +18,7 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
   display: block;
   transition: transform 200ms ease, box-shadow 200ms ease;
   will-change: transform;
+  transform-style: preserve-3d;
 }
 .nav-toggle {
   display: none;
@@ -30,11 +32,16 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
 .nav-links a.active { color: #d4af37; }
 .nav-links a:hover { text-decoration: underline; color: #d4af37; }
 
-/* Spin on hover */
-.nav-logo:hover { animation: spin 0.6s linear 1; };
+/* Horizontal rotate on hover (single run) */
+.nav-logo:hover {
+  animation: flipY 0.7s ease-out 1;
   box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
 }
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes flipY {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
 
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
