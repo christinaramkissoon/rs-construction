@@ -1,23 +1,37 @@
-Shared script and right-aligned hamburger navigation
-Add this script in the head of every page:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - R&S Ali Construction Ltd.</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleMenu() { document.getElementById("mobileMenu").classList.toggle("show"); }
+  </script>
+</head>
+<body>
 
-html
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("show");
-  }
-</script>
-Use this nav at the top of body on every page. Move the active class to the current page.
-
-html
-<nav class="navbar">
-  <div class="nav-left">
-    <img src="images/rs-logo-new.png" alt="R&S Ali Construction Logo" class="nav-logo">
-  </div>
-
-  <div class="nav-center">
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-left"><img src="images/rs-logo-new.png" alt="R&S Ali Construction Logo" class="nav-logo"></div>
+    <div class="nav-center">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20for%20Quote" class="quote-btn">Request a Quote</a>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="services.html">Services</a></li>
@@ -26,20 +40,26 @@ html
     </ul>
   </div>
 
-  <div class="nav-right">
+  <!-- Hero -->
+  <section class="hero">
+    <h1>R&S Ali Construction Ltd.</h1>
+    <p>Installer of Stucco, Decorative Mouldings & General Construction Services</p>
     <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20for%20Quote" class="quote-btn">Request a Quote</a>
-    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
-  </div>
-</nav>
+  </section>
 
-<!-- Mobile dropdown menu (appears under nav on small screens) -->
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
+  <!-- Content -->
+  <section>
+    <h2>Company history</h2>
+    <p class="lead">Founded in 2014, we bring over 16 years of expertise across Trinidad, Tobago, and Guyana.</p>
+  </section>
+
+  <section>
+    <h2>Why trust us</h2>
+    <p class="lead">We approach every project with professionalism, craftsmanship, and a commitment to customer satisfaction.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">…same footer…</footer>
+
+</body>
+</html>
