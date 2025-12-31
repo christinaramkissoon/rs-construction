@@ -15,9 +15,10 @@
       document.getElementById('overlay').classList.remove('show');
     }
 
-    // Products: toggle descriptions
+    // Products: toggle descriptions (click + keyboard)
     document.addEventListener('DOMContentLoaded', function () {
       const cards = document.querySelectorAll('.product-card');
+
       function toggleCard(card) {
         const isOpen = card.classList.contains('open');
         cards.forEach(c => c.classList.remove('open'));
@@ -25,6 +26,7 @@
         const btn = card.querySelector('[aria-expanded]');
         if (btn) btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
       }
+
       cards.forEach(card => {
         card.addEventListener('click', function (e) {
           if (e.target.tagName.toLowerCase() === 'a') return;
@@ -59,6 +61,9 @@
       <li><a href="about.html" onclick="closeSidebar()">About Us</a></li>
       <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
     </ul>
+    <div class="social">
+      <!-- optional social icons -->
+    </div>
   </aside>
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
@@ -174,4 +179,95 @@
         </article>
 
         <!-- Self-Cleaning Finish (Grouped Variants) -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Self
+        <article class="product-card" role="button" tabindex="0" aria-label="Self-Cleaning Finish" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/1-0-clean.jpg" alt="Self-cleaning finish sample">
+          <div class="product-meta">
+            <div class="product-title">Self-Cleaning Finish</div>
+            <div class="product-subtitle">Dirt-repellent, water-shedding</div>
+          </div>
+          <div class="product-desc">
+            <p>Technology that repels dirt and sheds water for long-lasting clean surfaces.</p>
+            <div class="variant-list">
+              <figure><img src="images/1-0-clean.jpg" alt="Variant 1.0"><figcaption>1.0</figcaption></figure>
+              <figure><img src="images/1-5-clean.jpg" alt="Variant 1.5"><figcaption>1.5</figcaption></figure>
+              <figure><img src="images/freeform-clean.jpg" alt="Variant Freeform"><figcaption>Freeform</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Antique/Mottled Coating -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Antique Mottled Coating" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/antique.jpg" alt="Antique mottled coating">
+          <div class="product-meta">
+            <div class="product-title">Antique/Mottled Coating</div>
+            <div class="product-subtitle">Creates antiqued or mottled appearance</div>
+          </div>
+          <div class="product-desc">
+            <p>Creates antiqued or mottled appearance over finishes.</p>
+          </div>
+        </article>
+
+        <!-- Reinforcement Mesh -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Reinforcement Mesh" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/mesh.jpg" alt="Reinforcement mesh">
+          <div class="product-meta">
+            <div class="product-title">Reinforcement Mesh</div>
+            <div class="product-subtitle">Glass fiber mesh — impact resistance</div>
+          </div>
+          <div class="product-desc">
+            <p>Glass fiber mesh for impact resistance in cladding systems.</p>
+          </div>
+        </article>
+
+        <!-- Primer & Adhesive -->
+        <article class="product-card" role="button" tabindex="0" aria-label="Primer and Adhesive" aria-expanded="false">
+          <span class="product-hint">Click to view</span>
+          <img src="images/primer-adhesive.jpg" alt="Primer and adhesive">
+          <div class="product-meta">
+            <div class="product-title">Primer & Adhesive</div>
+            <div class="product-subtitle">Acrylic adhesive/base coat — EIFS</div>
+          </div>
+          <div class="product-desc">
+            <p>Acrylic adhesive/base coat for EIFS systems.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-block">
+        <h3>Contact us</h3>
+        <div class="footer-contact">
+          <p><strong>Phone:</strong></p>
+          <p>1-868-352-0450</p>
+          <p>1-868-321-7018</p>
+          <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
+        </div>
+      </div>
+      <div class="footer-block">
+        <h3>Address</h3>
+        <div class="footer-contact">
+          <p>#53B Sookoo Trace, Ceder Hill Road</p>
+          <p>Claxton Bay</p>
+        </div>
+      </div>
+      <div class="footer-block">
+        <h3>Hours</h3>
+        <div class="footer-hours">
+          <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
+          <p>Sat: 8:00 AM - 1:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
