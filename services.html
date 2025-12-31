@@ -6,20 +6,28 @@
   <title>Services - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css" />
   <script>
-    function toggleSidebar(){document.getElementById('sidebar').classList.toggle('show');document.getElementById('overlay').classList.toggle('show');}
-    function closeSidebar(){document.getElementById('sidebar').classList.remove('show');document.getElementById('overlay').classList.remove('show');}
+    function toggleSidebar(){
+      document.getElementById('sidebar').classList.toggle('show');
+      document.getElementById('overlay').classList.toggle('show');
+    }
+    function closeSidebar(){
+      document.getElementById('sidebar').classList.remove('show');
+      document.getElementById('overlay').classList.remove('show');
+    }
   </script>
 </head>
 <body>
+  <!-- Topbar -->
   <header class="topbar">
     <div class="brand">
-      <img src="images/rs-logo-new.png" alt="Logo" /><div class="title">R&S Ali Construction Ltd.</div>
+      <img src="images/rs-logo-new.png" alt="Logo" />
+      <span class="title">R&S Ali Construction Ltd.</span>
     </div>
-    <div></div>
-    <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20a%20Quote" class="quote-btn">Request a Quote</a>
+    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
     <div class="hamburger" onclick="toggleSidebar()">☰</div>
   </header>
 
+  <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <img src="images/rs-logo-new.png" class="logo" alt="Logo" />
     <h2>Navigation</h2>
@@ -37,67 +45,80 @@
       <p>Address: #53B Sookoo Trace, Ceder Hill Road, Claxton Bay</p>
     </div>
     <div class="social">
-      <a href="YOUR_FACEBOOK_URL" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.55 17.52 2.06 12 2.06S2 6.55 2 12.06c0 4.99 3.66 9.13 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56v1.87h2.76l-.44 2.91h-2.32v7.03C18.34 21.19 22 17.05 22 12.06z"/></svg></a>
-      <a href="https://www.instagram.com/r_s_stucco" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm11 2.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM12 7.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5z"/></svg></a>
-      <a href="https://www.tiktok.com/@r_s_stucco?is_from_webapp=1&sender_device=pc" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.8 1.4 2.3 2.5 4 2.8v3.1c-1.7-.1-3.3-.6-4.7-1.5v6.9c0 3.9-3.2 7-7.1 7S1.6 18.2 1.6 14.3s3.2-7 7.1-7c.5 0 1 .1 1.5.2v3.3c-.5-.2-1-.3-1.5-.3-2.1 0-3.8 1.7-3.8 3.8s1.7 3.8 3.8 3.8c2.1 0 3.8-1.7 3.8-3.8V3h5.1z"/></svg></a>
+      <a href="https://www.facebook.com/rs.stucco">Facebook</a>
+      <a href="https://www.instagram.com/r_s_stucco">Instagram</a>
+      <a href="https://www.tiktok.com/@r_s_stucco?is_from_webapp=1&sender_device=pc">TikTok</a>
     </div>
   </aside>
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
+  <!-- Hero -->
   <section class="hero">
     <h1>Our Services</h1>
     <p>From stucco and mouldings to full general construction.</p>
-    <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20a%20Quote" class="quote-btn">Request a Quote</a>
+    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
   </section>
 
+  <!-- Content -->
   <main>
     <section>
       <h2>What we offer</h2>
       <div class="services-grid">
         <div class="service-card">
           <img src="images/service-construction.jpg" alt="General Construction">
-          <div class="content"><h3>General Construction</h3><p>Complete building solutions from foundation to finish.</p></div>
+          <h3>General Construction</h3>
+          <p>Complete building solutions from foundation to finish.</p>
         </div>
         <div class="service-card">
           <img src="images/service-maintenance.jpg" alt="Maintenance & Refurbishment">
-          <div class="content"><h3>Maintenance & Refurbishment</h3><p>Upgrades, repairs, and restoration for homes and businesses.</p></div>
+          <h3>Maintenance & Refurbishment</h3>
+          <p>Upgrades, repairs, and restoration for homes and businesses.</p>
         </div>
         <div class="service-card">
           <img src="images/service-stucco.jpg" alt="Stucco & Mouldings">
-          <div class="content"><h3>Stucco & Mouldings</h3><p>Elegant finishes and decorative moulding installations.</p></div>
+          <h3>Stucco & Mouldings</h3>
+          <p>Elegant finishes and decorative moulding installations.</p>
         </div>
         <div class="service-card">
           <img src="images/service-ceiling.jpg" alt="Ceilings">
-          <div class="content"><h3>Ceilings</h3><p>Gypsum, PVC, and suspended ceiling systems.</p></div>
+          <h3>Ceilings</h3>
+          <p>Gypsum, PVC, and suspended ceiling systems.</p>
         </div>
         <div class="service-card">
           <img src="images/service-painting.jpg" alt="Painting">
-          <div class="content"><h3>Painting</h3><p>Interior and exterior painting with professional results.</p></div>
+          <h3>Painting</h3>
+          <p>Interior and exterior painting with professional results.</p>
         </div>
         <div class="service-card">
           <img src="images/service-roofing.jpg" alt="Roofing">
-          <div class="content"><h3>Roofing</h3><p>Durable roofing solutions for all building types.</p></div>
+          <h3>Roofing</h3>
+          <p>Durable roofing solutions for all building types.</p>
         </div>
         <div class="service-card">
           <img src="images/service-tiling.jpg" alt="Tiling">
-          <div class="content"><h3>Tiling</h3><p>Floor and wall tiling with precision and style.</p></div>
+          <h3>Tiling</h3>
+          <p>Floor and wall tiling with precision and style.</p>
         </div>
         <div class="service-card">
           <img src="images/service-pressurewash.jpg" alt="Pressure Washing">
-          <div class="content"><h3>Pressure Washing</h3><p>Deep cleaning for driveways, walls, and surfaces.</p></div>
+          <h3>Pressure Washing</h3>
+          <p>Deep cleaning for driveways, walls, and surfaces.</p>
         </div>
         <div class="service-card">
           <img src="images/service-transport.jpg" alt="Transport">
-          <div class="content"><h3>Transport</h3><p>Reliable logistics and material transport services.</p></div>
+          <h3>Transport</h3>
+          <p>Reliable logistics and material transport services.</p>
         </div>
         <div class="service-card">
           <img src="images/service-welding.jpg" alt="Welding & Fabrication">
-          <div class="content"><h3>Welding & Fabrication</h3><p>Custom metalwork and structural fabrication.</p></div>
+          <h3>Welding & Fabrication</h3>
+          <p>Custom metalwork and structural fabrication.</p>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-block">
