@@ -31,6 +31,15 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
 .nav-links a { color: #fff; text-decoration: none; font-weight: bold; }
 .nav-links a.active { color: #d4af37; }
 .nav-links a:hover { text-decoration: underline; color: #d4af37; }
+.quote-btn {
+  background: #d4af37;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
 
 /* Horizontal rotate on hover (single run) */
 .nav-logo:hover {
@@ -79,30 +88,30 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
 }
 .hero h1 { font-size: 2.6em; margin-bottom: 10px; }
 .hero p { font-size: 1.2em; margin-bottom: 24px; }
-.quote-btn {
-  background: #d4af37;
-  color: #000;
-  padding: 12px 24px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
+.hero .quote-btn { padding: 12px 24px; }
 
 /* Sections */
-section { max-width: 900px; margin: 40px auto; padding: 20px; text-align: center; }
+section { max-width: 1000px; margin: 40px auto; padding: 20px; text-align: center; }
 h1, h2 { color: #222; }
 ul { list-style: disc; margin: 12px auto; padding-left: 20px; text-align: left; max-width: 700px; }
 
-/* Footer with contact info */
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
-footer p, footer a { color: #fff; font-size: 0.95em; }
-footer a { text-decoration: none; }
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.product-card h3 { margin-bottom: 8px; color: #222; }
+.product-card p { font-size: 0.95em; color: #555; }
 
 /* Gallery (Media page) */
 .gallery {
@@ -116,6 +125,16 @@ footer a { text-decoration: none; }
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+/* Footer with contact info */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+footer p, footer a { color: #fff; font-size: 0.95em; }
+footer a { text-decoration: none; }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
