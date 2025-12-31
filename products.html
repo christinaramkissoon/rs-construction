@@ -15,7 +15,6 @@
       document.getElementById('overlay').classList.remove('show');
     }
 
-    // Products: toggle descriptions
     document.addEventListener('DOMContentLoaded', function () {
       const cards = document.querySelectorAll('.product-card');
       function toggleCard(card) {
@@ -77,7 +76,7 @@
 
       <div class="products-grid">
         <!-- Decorative Coating -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Decorative Coating" aria-expanded="false">
+        <article class="product-card" tabindex="0" aria-label="Decorative Coating" aria-expanded="false">
           <span class="product-hint">Click to view</span>
           <img src="images/sto-decocoat.jpg" alt="Decorative coating">
           <div class="product-meta">
@@ -89,47 +88,26 @@
           </div>
         </article>
 
-        <!-- Textured Sand Finish (Fine) -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Fine" aria-expanded="false">
+        <!-- Textured Sand Finish (Grouped) -->
+        <article class="product-card" tabindex="0" aria-label="Textured Sand Finish" aria-expanded="false">
           <span class="product-hint">Click to view</span>
-          <img src="images/sto-essence-fine-sand.jpg" alt="Fine sand finish">
+          <img src="images/sto-essence-fine-sand.jpg" alt="Textured sand finish sample">
           <div class="product-meta">
             <div class="product-title">Textured Sand Finish</div>
-            <div class="product-subtitle">Smooth fine-grain acrylic — exterior</div>
+            <div class="product-subtitle">Fine, Medium, and Swirl textures</div>
           </div>
           <div class="product-desc">
-            <p>Smooth fine-grain acrylic finish for exterior walls.</p>
-          </div>
-        </article>
-
-        <!-- Textured Sand Finish (Medium) -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Medium" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-essence-medium-sand.jpg" alt="Medium sand finish">
-          <div class="product-meta">
-            <div class="product-title">Textured Sand Finish</div>
-            <div class="product-subtitle">Medium-grain acrylic — more texture</div>
-          </div>
-          <div class="product-desc">
-            <p>Medium-grain acrylic finish for more texture.</p>
-          </div>
-        </article>
-
-        <!-- Textured Sand Finish (Swirl) -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Textured Sand Finish Swirl" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-essence-swirl.jpg" alt="Swirled finish">
-          <div class="product-meta">
-            <div class="product-title">Textured Sand Finish</div>
-            <div class="product-subtitle">Swirled acrylic — decorative exterior</div>
-          </div>
-          <div class="product-desc">
-            <p>Swirled acrylic finish for decorative exterior surfaces.</p>
+            <p>Acrylic sand-texture finishes available in fine, medium, and decorative swirl patterns.</p>
+            <div class="variant-list">
+              <figure><img src="images/sto-essence-fine-sand.jpg" alt="Fine sand"><figcaption>Fine — smooth texture</figcaption></figure>
+              <figure><img src="images/sto-essence-medium-sand.jpg" alt="Medium sand"><figcaption>Medium — more texture</figcaption></figure>
+              <figure><img src="images/sto-essence-swirl.jpg" alt="Swirl finish"><figcaption>Swirl — decorative</figcaption></figure>
+            </div>
           </div>
         </article>
 
         <!-- Granite-Look Finish -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Granite-Look Finish" aria-expanded="false">
+        <article class="product-card" tabindex="0" aria-label="Granite-Look Finish" aria-expanded="false">
           <span class="product-hint">Click to view</span>
           <img src="images/sto-granite.jpg" alt="Granite-look finish">
           <div class="product-meta">
@@ -142,7 +120,7 @@
         </article>
 
         <!-- Lux / Reflective Finish -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Lux Reflective Finish" aria-expanded="false">
+        <article class="product-card" tabindex="0" aria-label="Lux Reflective Finish" aria-expanded="false">
           <span class="product-hint">Click to view</span>
           <img src="images/sto-lux.jpg" alt="Lux reflective finish">
           <div class="product-meta">
@@ -154,8 +132,8 @@
           </div>
         </article>
 
-        <!-- Acrylic Wall Finish (Grouped Variants) -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Acrylic Wall Finish" aria-expanded="false">
+        <!-- Acrylic Wall Finish (Grouped) -->
+        <article class="product-card" tabindex="0" aria-label="Acrylic Wall Finish" aria-expanded="false">
           <span class="product-hint">Click to view</span>
           <img src="images/stolit-1-0.jpg" alt="Acrylic wall finish sample">
           <div class="product-meta">
@@ -165,12 +143,16 @@
           <div class="product-desc">
             <p>Standard and creative acrylic textured finishes available in different grain sizes.</p>
             <div class="variant-list">
-              <figure><img src="images/stolit-1-0.jpg" alt="Acrylic Wall Finish 1.0"><figcaption>1.0 — fine grain</figcaption></figure>
-              <figure><img src="images/stolit-1-5.jpg" alt="Acrylic Wall Finish 1.5"><figcaption>1.5 — medium grain</figcaption></figure>
-              <figure><img src="images/stolit-freeform.jpg" alt="Acrylic Wall Finish Freeform"><figcaption>Freeform — creative surfaces</figcaption></figure>
-              <figure><img src="images/
-        <!-- Self-Cleaning Finish (Grouped Variants) -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Self-Cleaning Finish" aria-expanded="false">
+              <figure><img src="images/stolit-1-0.jpg" alt="Variant 1.0"><figcaption>1.0 — fine grain</figcaption></figure>
+              <figure><img src="images/stolit-1-5.jpg" alt="Variant 1.5"><figcaption>1.5 — medium grain</figcaption></figure>
+              <figure><img src="images/stolit-freeform.jpg" alt="Variant Freeform"><figcaption>Freeform — creative surfaces</figcaption></figure>
+              <figure><img src="images/sto-r1-5.jpg" alt="Variant Coarse R1.5"><figcaption>Coarse R1.5 — bold texture</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Self-Cleaning Finish (Grouped) -->
+        <article class="product-card" tabindex="0" aria-label="Self-Cleaning Finish" aria-expanded="false">
           <span class="product-hint">Click to view</span>
           <img src="images/lotusan-1-0.jpg" alt="Self-cleaning finish sample">
           <div class="product-meta">
@@ -181,14 +163,15 @@
             <p>Technology that repels dirt and sheds water for long-lasting clean surfaces.</p>
             <div class="variant-list">
               <figure><img src="images/lotusan-1-0.jpg" alt="Self-Cleaning Finish 1.0"><figcaption>1.0</figcaption></figure>
-              <figure><img src="images/lotusan-1-5.jpg" alt="Self-Cleaning Finish 1.5"><figcaption>1.5</figcaption></figure>
+              <figure><img src="images/lotusan-1-5.jpg
+                                      <figure><img src="images/lotusan-1-5.jpg" alt="Self-Cleaning Finish 1.5"><figcaption>1.5</figcaption></figure>
               <figure><img src="images/lotusan-freeform.jpg" alt="Self-Cleaning Finish Freeform"><figcaption>Freeform</figcaption></figure>
             </div>
           </div>
         </article>
 
         <!-- Antique/Mottled Coating -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Antique Mottled Coating" aria-expanded="false">
+        <article class="product-card" tabindex="0" aria-label="Antique Mottled Coating" aria-expanded="false">
           <span class="product-hint">Click to view</span>
           <img src="images/sto-tique.jpg" alt="Antique mottled coating">
           <div class="product-meta">
@@ -201,7 +184,7 @@
         </article>
 
         <!-- Reinforcement Mesh -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Reinforcement Mesh" aria-expanded="false">
+        <article class="product-card" tabindex="0" aria-label="Reinforcement Mesh" aria-expanded="false">
           <span class="product-hint">Click to view</span>
           <img src="images/sto-mesh.jpg" alt="Reinforcement mesh">
           <div class="product-meta">
@@ -214,7 +197,7 @@
         </article>
 
         <!-- Primer & Adhesive -->
-        <article class="product-card" role="button" tabindex="0" aria-label="Primer and Adhesive" aria-expanded="false">
+        <article class="product-card" tabindex="0" aria-label="Primer and Adhesive" aria-expanded="false">
           <span class="product-hint">Click to view</span>
           <img src="images/sto-primer-adhesive.jpg" alt="Primer and adhesive">
           <div class="product-meta">
@@ -262,3 +245,5 @@
   </footer>
 </body>
 </html>
+
+                        
