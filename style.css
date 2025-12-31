@@ -94,6 +94,7 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
 section { max-width: 1000px; margin: 40px auto; padding: 20px; text-align: center; }
 h1, h2 { color: #222; }
 ul { list-style: disc; margin: 12px auto; padding-left: 20px; text-align: left; max-width: 700px; }
+.lead { font-size: 1.05em; color: #444; }
 
 /* Products grid */
 .products-grid {
@@ -113,7 +114,7 @@ ul { list-style: disc; margin: 12px auto; padding-left: 20px; text-align: left; 
 .product-card h3 { margin-bottom: 8px; color: #222; }
 .product-card p { font-size: 0.95em; color: #555; }
 
-/* Gallery (Media page) */
+/* Gallery (Projects/Media page) */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
