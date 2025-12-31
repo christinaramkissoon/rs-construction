@@ -11,15 +11,45 @@
 </head>
 <body>
 
-  <nav class="navbar">…Services link has class="active"…</nav>
-  <div class="mobile-menu" id="mobileMenu">…Services link has class="active"…</div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-left"><img src="images/rs-logo-new.png" alt="R&S Ali Construction Logo" class="nav-logo"></div>
+    <div class="nav-center">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20for%20Quote" class="quote-btn">Request a Quote</a>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
   <section class="hero">
     <h1>Our Services</h1>
     <p>From stucco and mouldings to full general construction.</p>
     <a href="mailto:rsaliconstruction@outlook.com?subject=Request%20for%20Quote" class="quote-btn">Request a Quote</a>
   </section>
 
+  <!-- Services List -->
   <section>
     <h2>What we do</h2>
     <ul>
@@ -29,16 +59,4 @@
       <li>Masonry</li>
       <li>Ceilings (Gypsum, PVC, Suspended)</li>
       <li>Painting</li>
-      <li>Internal & External Moldings</li>
-      <li>Roofing</li>
-      <li>Tiling</li>
-      <li>Pressure Washing</li>
-      <li>Transport</li>
-      <li>Welding & Fabrication</li>
-    </ul>
-  </section>
-
-  <footer class="site-footer">…</footer>
-
-</body>
-</html>
+      <li>Internal & External
