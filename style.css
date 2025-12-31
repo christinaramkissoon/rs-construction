@@ -1,7 +1,9 @@
+/* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Arial, sans-serif; background: #111; color: #fff; }
 img { max-width: 100%; display: block; }
 
+/* Colors */
 :root {
   --gold: #d4af37;
   --dark: #111;
@@ -17,7 +19,10 @@ img { max-width: 100%; display: block; }
 }
 .topbar img { width: 50px; border-radius: 50%; }
 .topbar .title { color: #fff; font-weight: bold; margin-left: 10px; }
-.quote-btn { background: var(--gold); color: #000; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+.quote-btn {
+  background: var(--gold); color: #000; padding: 10px 16px;
+  border-radius: 6px; text-decoration: none; font-weight: bold;
+}
 .hamburger { font-size: 24px; color: #fff; cursor: pointer; }
 
 /* Sidebar */
@@ -58,12 +63,39 @@ h2 { color: var(--gold); margin-bottom: 10px; }
 .lead { color: var(--muted); }
 
 /* Products */
-.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.products-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
 .product-card { background: #1a1a1a; padding: 20px; border-radius: 8px; }
 .product-card h3 { color: var(--gold); margin-bottom: 8px; }
 
+/* Gallery */
+.gallery {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.gallery figure { background: #1a1a1a; border-radius: 8px; overflow: hidden; }
+.gallery img { height: 220px; object-fit: cover; }
+.gallery figcaption { padding: 10px; font-size: 0.9em; color: var(--muted); }
+
+/* Services */
+.services-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.service-card { background: #1a1a1a; border-radius: 8px; overflow: hidden; }
+.service-card img { height: 160px; object-fit: cover; }
+.service-card h3 { color: var(--gold); margin: 10px; }
+.service-card p { color: var(--muted); margin: 0 10px 10px; }
+
 /* Footer */
 .site-footer { background: var(--nav); padding: 30px 20px; }
-.footer-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.footer-inner {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 .footer-block h3 { color: var(--gold); margin-bottom: 10px; }
-.footer-bottom { text-align: center; margin-top: 20px; color: var(--muted); font-size: 0.9em; }
+.footer-bottom {
+  text-align: center; margin-top: 20px; color: var(--muted); font-size: 0.9em;
+}
