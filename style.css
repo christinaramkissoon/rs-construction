@@ -1,118 +1,302 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects - R&S Ali Construction Ltd.</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script>
-    function toggleSidebar(){
-      document.getElementById('sidebar').classList.toggle('show');
-      document.getElementById('overlay').classList.toggle('show');
-    }
-    function closeSidebar(){
-      document.getElementById('sidebar').classList.remove('show');
-      document.getElementById('overlay').classList.remove('show');
-    }
-  </script>
-</head>
-<body>
-  <!-- Topbar -->
-  <header class="topbar">
-    <img src="images/rs-logo-new.png" alt="Logo" />
-    <div class="hamburger" onclick="toggleSidebar()">☰</div>
-  </header>
+/* - Fonts - */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <img src="images/rs-logo-new.png" class="logo" alt="Logo" />
-    <h2>Navigation</h2>
-    <ul class="nav-links">
-      <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
-      <li><a href="products.html" onclick="closeSidebar()">Products</a></li>
-      <li><a href="projects.html" class="active" onclick="closeSidebar()">Projects</a></li>
-      <li><a href="services.html" onclick="closeSidebar()">Services</a></li>
-      <li><a href="about.html" onclick="closeSidebar()">About Us</a></li>
-      <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
-    </ul>
-    <!-- Social media icons -->
-    <div class="social-icons">
-      <a href="https://www.facebook.com/rsaliconstruction" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/rsaliconstruction" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@rsaliconstruction" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-      <a href="https://wa.me/18683520450" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </aside>
-  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+/* - Base - */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background: #f7f7f7;
+  line-height: 1.6;
+}
 
-  <!-- Hero -->
-  <section class="hero" style="background: url('images/project-house1.jpeg') center/cover no-repeat;">
-    <h1>Our Projects</h1>
-    <p>Take a look at our portfolio of completed work.</p>
-    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
-  </section>
+/* - Links & buttons - */
+a { color: #B8860B; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.quote-btn {
+  display: inline-block;
+  background: #B8860B;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.quote-btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
 
-  <!-- Content -->
-  <main>
-    <section>
-      <h2>Featured Projects</h2>
-      <div class="projects-grid">
-        <!-- Building Projects -->
-        <article class="project-card"><img src="images/project-building1.jpeg" alt="Building project 1"><div class="project-meta"><h3>Building Project 1</h3><p>Commercial construction with durable finishes.</p></div></article>
-        <article class="project-card"><img src="images/project-building2.jpeg" alt="Building project 2"><div class="project-meta"><h3>Building Project 2</h3><p>Modern office complex.</p></div></article>
-        <article class="project-card"><img src="images/project-building5.jpeg" alt="Building project 5"><div class="project-meta"><h3>Building Project 5</h3><p>Large-scale construction project.</p></div></article>
-        <article class="project-card"><img src="images/project-building6.jpeg" alt="Building project 6"><div class="project-meta"><h3>Building Project 6</h3><p>Durable and functional design.</p></div></article>
+/* - Topbar - */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.topbar img {
+  height: 42px;
+  width: auto;
+}
+.hamburger {
+  font-size: 1.6rem;
+  cursor: pointer;
+  user-select: none;
+}
 
-        <!-- House Projects -->
-        <article class="project-card"><img src="images/project-house1.jpeg" alt="House project 1"><div class="project-meta"><h3>House Project 1</h3><p>Modern family home.</p></div></article>
-        <article class="project-card"><img src="images/project-house2.jpeg" alt="House project 2"><div class="project-meta"><h3>House Project 2</h3><p>Residential build with elegant finishes.</p></div></article>
-        <article class="project-card"><img src="images/project-house3.jpeg" alt="House project 3"><div class="project-meta"><h3>House Project 3</h3><p>Contemporary design and layout.</p></div></article>
-        <article class="project-card"><img src="images/project-house4.jpeg" alt="House project 4"><div class="project-meta"><h3>House Project 4</h3><p>Renovation with updated finishes.</p></div></article>
-        <article class="project-card"><img src="images/project-house5.jpeg" alt="House project 5"><div class="project-meta"><h3>House Project 5</h3><p>Residential project with modern style.</p></div></article>
-        <article class="project-card"><img src="images/project-house6.jpeg" alt="House project 6"><div class="project-meta"><h3>House Project 6</h3><p>Durable construction and design.</p></div></article>
+/* - Sidebar - */
+.sidebar {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background: #111;
+  color: #fff;
+  padding: 1rem 1rem 2rem;
+  transition: left 0.25s ease;
+  z-index: 1100;
+  overflow-y: auto;
+}
+.sidebar.show { left: 0; }
+.sidebar .logo {
+  width: 140px;
+  height: auto;
+  margin: 0.5rem 0 1rem;
+}
+.sidebar h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.25rem 0 0.75rem;
+  color: #ddd;
+  letter-spacing: 0.02em;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+.nav-links li { margin: 0.25rem 0; }
+.nav-links a {
+  display: block;
+  padding: 0.6rem 0.5rem;
+  border-radius: 6px;
+  color: #ddd;
+  font-weight: 400;
+}
+.nav-links a:hover { background: rgba(255,255,255,0.06); }
+.nav-links a.active {
+  color: #FFD700; /* gold highlight */
+  font-weight: 600;
+}
 
-        <!-- Indoor Projects -->
-        <article class="project-card"><img src="images/project-indoor1.jpeg" alt="Indoor project 1"><div class="project-meta"><h3>Indoor Project 1</h3><p>Interior finishing and design.</p></div></article>
-        <article class="project-card"><img src="images/project-indoor2.jpeg" alt="Indoor project 2"><div class="project-meta"><h3>Indoor Project 2</h3><p>Modern interior layout.</p></div></article>
-        <article class="project-card"><img src="images/project-indoor3.jpeg" alt="Indoor project 3"><div class="project-meta"><h3>Indoor Project 3</h3><p>Elegant indoor finishes.</p></div></article>
-        <article class="project-card"><img src="images/project-indoor4.jpeg" alt="Indoor project 4"><div class="project-meta"><h3>Indoor Project 4</h3><p>Functional and stylish interiors.</p></div></article>
+/* - Social icons - */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+}
+.social-icons a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+.social-icons a:hover {
+  background: rgba(255,255,255,0.16);
+}
 
-        <!-- Roof Project -->
-        <article class="project-card"><img src="images/project-roof1.jpeg" alt="Roof project 1"><div class="project-meta"><h3>Roof Project</h3><p>Roof installation and finishing.</p></div></article>
-      </div>
-    </section>
-  </main>
+/* - Overlay - */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+  z-index: 1050;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-block">
-        <h3>Contact us</h3>
-        <div class="footer-contact">
-          <p><strong>Phone:</strong> 1-868-352-0450</p>
-          <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
-        </div>
-      </div>
-      <div class="footer-block">
-        <h3>Address</h3>
-        <div class="footer-contact">
-          <p>#53B Sookoo Trace, Cedar Hill Road</p>
-          <p>Claxton Bay</p>
-        </div>
-      </div>
-      <div class="footer-block">
-        <h3>Hours</h3>
-        <div class="footer-hours">
-          <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
-          <p>Sat: 8:00 AM - 1:00 PM</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+/* - Hero - */
+.hero {
+  position: relative;
+  min-height: 46vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 3.5rem 1rem;
+  /* Default background to unify hero across all pages */
+  background: url('images/project-house1.jpeg') center/cover no-repeat;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)
+  );
+}
+.hero h1, .hero p, .hero .quote-btn {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  margin: 0 0 0.5rem;
+}
+.hero p {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  margin: 0 0 1rem;
+}
+
+/* - Main layout - */
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+section h2 {
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+  color: #333;
+}
+
+/* - Cards: shared patterns - */
+.project-card, .product-card, .service-card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.project-card:hover, .product-card:hover, .service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+.project-card img, .product-card img, .service-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+.project-meta, .product-meta, .service-meta {
+  padding: 0.9rem 1rem;
+}
+.project-meta h3, .product-meta h3, .service-meta h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+.project-meta p, .product-meta p, .service-meta p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* - Products: expandable description - */
+.product-desc {
+  padding: 0 1rem 1rem;
+  color: #555;
+  display: none;
+}
+.product-card.open .product-desc { display: block; }
+.product-card {
+  cursor: pointer;
+}
+.product-card:focus {
+  outline: 3px solid #B8860B;
+  outline-offset: 2px;
+}
+
+/* - Grids - */
+.projects-grid, .products-grid, .services-grid {
+  display: grid;
+  gap: 1rem;
+}
+.projects-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.products-grid, .services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* - Footer - */
+.site-footer {
+  margin-top: 3rem;
+  background: #111;
+  color: #ddd;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer-block h3 {
+  margin: 0 0 0.6rem;
+  color: #fff;
+  font-size: 1.05rem;
+}
+.footer-contact p, .footer-hours p {
+  margin: 0.25rem 0;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  text-align: center;
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* - Utilities - */
+img { max-width: 100%; }
+
+/* - Responsive - */
+@media (max-width: 1024px) {
+  .projects-grid, .products-grid, .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .projects-grid, .products-grid, .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  .sidebar { width: 86vw; left: -86vw; }
+  .hero { min-height: 40vh; padding: 2.5rem 1rem; }
+  .project-card img, .product-card img, .service-card img { height: 180px; }
+}
+
+/* - Accessibility - */
+.hamburger:focus, .social-icons a:focus, .nav-links a:focus, .quote-btn:focus {
+  outline: 3px solid #B8860B;
+  outline-offset: 2px;
+}
