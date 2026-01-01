@@ -35,57 +35,54 @@
       <li><a href="about.html" onclick="closeSidebar()">About Us</a></li>
       <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
     </ul>
-    <div class="social">
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/rs.stucco" aria-label="Facebook">
-        <!-- svg omitted for brevity -->
-      </a>
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/r_s_stucco" aria-label="Instagram">
-        <!-- svg omitted for brevity -->
-      </a>
-      <!-- TikTok -->
-      <a href="https://www.tiktok.com/@r_s_stucco?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
-        <!-- svg omitted for brevity -->
-      </a>
+    <!-- Social media icons -->
+    <div class="social-icons">
+      <a href="https://facebook.com/rsconstruction" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/rsconstruction" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/company/rsconstruction" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </aside>
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
   <!-- Hero -->
-  <section class="hero" style="background: url('images/project-house4.jpeg') center/cover no-repeat;">
+  <section class="hero" style="background: url('images/project-house2.jpeg') center/cover no-repeat;">
     <h1>Our Projects</h1>
-    <p>Selected work across residential, commercial, and interiors.</p>
-    <a href="contact.html" class="quote-btn">Request a Quote</a>
+    <p>Explore some of our completed works and ongoing builds.</p>
+    <!-- ✅ Request a Quote button opens email -->
+    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
   </section>
 
   <!-- Content -->
   <main>
     <section>
-      <h2>Residential</h2>
-      <div class="gallery">
-        <figure><img src="images/project-house1.jpeg" alt="Residential project 1"><figcaption>Exterior stucco with decorative mouldings.</figcaption></figure>
-        <figure><img src="images/project-house2.jpeg" alt="Residential project 2"><figcaption>Facade upgrade and roofing.</figcaption></figure>
-        <figure><img src="images/project-house3.jpeg" alt="Residential project 3"><figcaption>New build finishing and painting.</figcaption></figure>
-        <figure><img src="images/project-house4.jpeg" alt="Residential project 4"><figcaption>Premium finished home.</figcaption></figure>
-      </div>
-    </section>
+      <h2>Featured Projects</h2>
+      <p class="lead">Click or tap a project to view details.</p>
 
-    <section>
-      <h2>Commercial</h2>
-      <div class="gallery">
-        <figure><img src="images/project-building1.jpeg" alt="Commercial project 1"><figcaption>Facade renovation on commercial complex.</figcaption></figure>
-        <figure><img src="images/project-building2.jpeg" alt="Commercial project 2"><figcaption>Stucco and fabrication.</figcaption></figure>
-        <figure><img src="images/project-building3.jpeg" alt="Commercial project 3"><figcaption>Roofing and exterior painting.</figcaption></figure>
-      </div>
-    </section>
+      <div class="projects-grid">
+        <!-- Example Project Card -->
+        <article class="project-card">
+          <img src="images/project-house1.jpeg" alt="Residential project">
+          <div class="project-meta">
+            <h3>Residential Build</h3>
+            <p>Modern family home with textured finishes and reinforced cladding.</p>
+          </div>
+        </article>
 
-    <section>
-      <h2>Interiors</h2>
-      <div class="gallery">
-        <figure><img src="images/project-indoors1.jpeg" alt="Interior project 1"><figcaption>Gypsum ceilings and paintwork.</figcaption></figure>
-        <figure><img src="images/project-indoors2.jpeg" alt="Interior project 2"><figcaption>Feature wall tiling and finishing.</figcaption></figure>
-        <figure><img src="images/project-indoors3.jpeg" alt="Interior project 3"><figcaption>Suspended ceilings installation.</figcaption></figure>
+        <article class="project-card">
+          <img src="images/project-house3.jpeg" alt="Commercial project">
+          <div class="project-meta">
+            <h3>Commercial Complex</h3>
+            <p>Multi‑unit commercial space with durable exterior coatings.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project-house4.jpeg" alt="Renovation project">
+          <div class="project-meta">
+            <h3>Renovation</h3>
+            <p>Upgraded finishes and structural reinforcement for longevity.</p>
+          </div>
+        </article>
       </div>
     </section>
   </main>
