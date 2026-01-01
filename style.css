@@ -112,6 +112,10 @@ body {
   padding: 2em;
 }
 .product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px; /* ✅ Equal height for all cards */
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -129,6 +133,7 @@ body {
 }
 .product-meta {
   padding: 1em;
+  flex-grow: 1;
 }
 .product-title {
   font-size: 1.2em;
