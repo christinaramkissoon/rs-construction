@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Products - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script>
     function toggleSidebar(){
       document.getElementById('sidebar').classList.toggle('show');
@@ -14,25 +16,16 @@
       document.getElementById('sidebar').classList.remove('show');
       document.getElementById('overlay').classList.remove('show');
     }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const cards = document.querySelectorAll('.product-card');
-      function toggleCard(card) {
-        const isOpen = card.classList.contains('open');
-        cards.forEach(c => c.classList.remove('open'));
-        if (!isOpen) card.classList.add('open');
-        const btn = card.querySelector('[aria-expanded]');
-        if (btn) btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
-      }
-      cards.forEach(card => {
-        card.addEventListener('click', function (e) {
-          if (e.target.tagName.toLowerCase() === 'a') return;
-          toggleCard(card);
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".product-card").forEach(card => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("open");
+          card.setAttribute("aria-expanded", card.classList.contains("open"));
         });
-        card.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            toggleCard(card);
+        card.addEventListener("keypress", e => {
+          if (e.key === "Enter" || e.key === " ") {
+            card.classList.toggle("open");
+            card.setAttribute("aria-expanded", card.classList.contains("open"));
           }
         });
       });
@@ -40,13 +33,11 @@
   </script>
 </head>
 <body>
-  <!-- Topbar -->
   <header class="topbar">
     <img src="images/rs-logo-new.png" alt="Logo" />
     <div class="hamburger" onclick="toggleSidebar()">☰</div>
   </header>
 
-  <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <img src="images/rs-logo-new.png" class="logo" alt="Logo" />
     <h2>Navigation</h2>
@@ -58,7 +49,6 @@
       <li><a href="about.html" onclick="closeSidebar()">About Us</a></li>
       <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
     </ul>
-    <!-- Social media icons -->
     <div class="social-icons">
       <a href="https://facebook.com/rsconstruction" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://instagram.com/rsconstruction" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -68,167 +58,42 @@
   </aside>
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
-  <!-- Hero -->
   <section class="hero" style="background: url('images/project-house4.jpeg') center/cover no-repeat;">
     <h1>Our Products</h1>
-    <p>Quality materials for superior finishes and durable builds.</p>
-    <!-- ✅ Request a Quote button -->
-    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
+    <p>Explore our range of wall finishes, coatings, and construction materials.</p>
+    <a href="/cdn-cgi/l/email-protection#265455474a4f4549485552545345524f4948664953524a49494d0845494b" class="quote-btn">Request a Quote</a>
   </section>
 
-  <!-- Content -->
   <main>
     <section>
-      <h2>Product catalog</h2>
-      <p class="lead">Click or tap a product to view its description.</p>
-
+      <h2>Wall Finishes & Materials</h2>
       <div class="products-grid">
-        <!-- Decorative Coating -->
-        <article class="product-card" tabindex="0" aria-label="Decorative Coating" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-decocoat.jpg" alt="Decorative coating">
-          <div class="product-meta">
-            <div class="product-title">Decorative Coating</div>
-            <div class="product-subtitle">Acrylic, fine aggregate — interior/exterior</div>
-          </div>
-          <div class="product-desc">
-            <p>Acrylic decorative coating with fine aggregate for interior/exterior walls.</p>
-          </div>
-        </article>
-
-        <!-- Textured Sand Finish -->
-        <article class="product-card" tabindex="0" aria-label="Textured Sand Finish" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-essence-fine-sand.jpg" alt="Textured sand finish sample">
-          <div class="product-meta">
-            <div class="product-title">Textured Sand Finish</div>
-            <div class="product-subtitle">Fine, Medium, and Swirl textures</div>
-          </div>
-          <div class="product-desc">
-            <p>Acrylic sand-texture finishes available in fine, medium, and decorative swirl patterns.</p>
-            <div class="variant-list">
-              <figure><img src="images/sto-essence-fine-sand.jpg" alt="Fine sand"><figcaption>Fine — smooth texture</figcaption></figure>
-              <figure><img src="images/sto-essence-medium-sand.jpg" alt="Medium sand"><figcaption>Medium — more texture</figcaption></figure>
-              <figure><img src="images/sto-essence-swirl.jpg" alt="Swirl finish"><figcaption>Swirl — decorative</figcaption></figure>
-            </div>
-          </div>
-        </article>
-
-        <!-- Granite-Look Finish -->
-        <article class="product-card" tabindex="0" aria-label="Granite-Look Finish" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-granite.jpg" alt="Granite-look finish">
-          <div class="product-meta">
-            <div class="product-title">Granite-Look Finish</div>
-            <div class="product-subtitle">Lightweight acrylic — polished granite look</div>
-          </div>
-          <div class="product-desc">
-            <p>Lightweight acrylic finish mimicking polished granite.</p>
-          </div>
-        </article>
-
-        <!-- Lux / Reflective Finish -->
-        <article class="product-card" tabindex="0" aria-label="Lux Reflective Finish" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-lux.jpg" alt="Lux reflective finish">
-          <div class="product-meta">
-            <div class="product-title">Lux / Reflective Finish</div>
-            <div class="product-subtitle">Lustrous acrylic with reflective particles</div>
-          </div>
-          <div class="product-desc">
-            <p>Lustrous acrylic finish with reflective particles.</p>
-          </div>
-        </article>
-
-        <!-- Acrylic Wall Finish -->
-        <article class="product-card" tabindex="0" aria-label="Acrylic Wall Finish" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/stolit-1-0.jpg" alt="Acrylic wall finish sample">
-          <div class="product-meta">
-            <div class="product-title">Acrylic Wall Finish</div>
-            <div class="product-subtitle">Multiple textures and grains</div>
-          </div>
-          <div class="product-desc">
-            <p>Standard and creative acrylic textured finishes available in different grain sizes.</p>
-            <div class="variant-list">
-              <figure><img src="images/stolit-1-0.jpg" alt="Variant 1.0"><figcaption>1.0 — fine grain</figcaption></figure>
-              <figure><img src="images/stolit-1-5.jpg" alt="Variant 1.5"><figcaption>1.5 — medium grain</figcaption></figure>
-              <figure><img src="images/stolit-freeform.jpg" alt="Variant Freeform"><figcaption>Freeform — creative surfaces</figcaption></figure>
-              <figure><img src="images/sto-r1-5.jpg" alt="Variant Coarse R1.5"><figcaption>Coarse R1.
-                        <!-- Self-Cleaning Finish -->
-        <article class="product-card" tabindex="0" aria-label="Self-Cleaning Finish" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/lotusan-1-0.jpg" alt="Self-cleaning finish sample">
-          <div class="product-meta">
-            <div class="product-title">Self-Cleaning Finish</div>
-            <div class="product-subtitle">Dirt-repellent, water-shedding</div>
-          </div>
-          <div class="product-desc">
-            <p>Technology that repels dirt and sheds water for long-lasting clean surfaces.</p>
-            <div class="variant-list">
-              <figure><img src="images/lotusan-1-0.jpg" alt="Self-Cleaning Finish 1.0"><figcaption>1.0</figcaption></figure>
-              <figure><img src="images/lotusan-1-5.jpg" alt="Self-Cleaning Finish 1.5"><figcaption>1.5</figcaption></figure>
-              <figure><img src="images/lotusan-freeform.jpg" alt="Self-Cleaning Finish Freeform"><figcaption>Freeform</figcaption></figure>
-            </div>
-          </div>
-        </article>
-
-        <!-- Antique/Mottled Coating -->
-        <article class="product-card" tabindex="0" aria-label="Antique Mottled Coating" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-tique.jpg" alt="Antique mottled coating">
-          <div class="product-meta">
-            <div class="product-title">Antique/Mottled Coating</div>
-            <div class="product-subtitle">Creates antiqued or mottled appearance</div>
-          </div>
-          <div class="product-desc">
-            <p>Creates an antiqued or mottled look over compatible finishes.</p>
-          </div>
-        </article>
-
-        <!-- Reinforcement Mesh -->
-        <article class="product-card" tabindex="0" aria-label="Reinforcement Mesh" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-mesh.jpg" alt="Reinforcement mesh">
-          <div class="product-meta">
-            <div class="product-title">Reinforcement Mesh</div>
-            <div class="product-subtitle">Glass fiber mesh — impact resistance</div>
-          </div>
-          <div class="product-desc">
-            <p>Glass fiber mesh to improve impact resistance in cladding systems.</p>
-          </div>
-        </article>
-
-        <!-- Primer & Adhesive -->
-        <article class="product-card" tabindex="0" aria-label="Primer and Adhesive" aria-expanded="false">
-          <span class="product-hint">Click to view</span>
-          <img src="images/sto-primer-adhesive.jpg" alt="Primer and adhesive">
-          <div class="product-meta">
-            <div class="product-title">Primer & Adhesive</div>
-            <div class="product-subtitle">Acrylic adhesive/base coat — EIFS</div>
-          </div>
-          <div class="product-desc">
-            <p>Acrylic adhesive/base coat compatible with EIFS systems.</p>
-          </div>
-        </article>
-      </div> <!-- end of products-grid -->
+        <article class="product-card" tabindex="0"><img src="images/decorative-finish.jpg" alt="Decorative wall finish"><div class="product-meta"><h3 class="product-title">Decorative Wall Finish</h3><p class="product-subtitle">Elegant textures</p></div><div class="product-desc"><p>High-quality decorative finishes for interior and exterior walls.</p></div></article>
+        <article class="product-card" tabindex="0"><img src="images/sand-finish.jpg" alt="Sand finish"><div class="product-meta"><h3 class="product-title">Sand Finish</h3><p class="product-subtitle">Fine, Medium, Coarse</p></div><div class="product-desc"><p>Durable sand finishes in fine, medium, and coarse textures for a natural look.</p></div></article>
+        <article class="product-card" tabindex="0"><img src="images/granite-finish.jpg" alt="Granite finish"><div class="product-meta"><h3 class="product-title">Granite Finish</h3><p class="product-subtitle">Stone-like appearance</p></div><div class="product-desc"><p>Granite finishes for a premium, stone-textured aesthetic.</p></div></article>
+        <article class="product-card" tabindex="0"><img src="images/lux-finish.jpg" alt="Lux finish"><div class="product-meta"><h3 class="product-title">Lux Finish</h3><p class="product-subtitle">Smooth and modern</p></div><div class="product-desc"><p>Luxurious smooth finishes for contemporary designs.</p></div></article>
+        <article class="product-card" tabindex="0"><img src="images/acrylic-finish.jpg" alt="Acrylic finish"><div class="product-meta"><h3 class="product-title">Acrylic Finish</h3><p class="product-subtitle">Fine, Medium, Coarse</p></div><div class="product-desc"><p>Acrylic finishes available in multiple textures for versatile applications.</p></div></article>
+        <article class="product-card" tabindex="0"><img src="images/self-cleaning.jpg" alt="Self-cleaning finish"><div class="product-meta"><h3 class="product-title">Self-Cleaning Finish</h3><p class="product-subtitle">Lotusan Technology</p></div><div class="product-desc"><p>Advanced finishes with self-cleaning properties using Lotusan technology.</p></div></article>
+        <article class="product-card" tabindex="0"><img src="images/antique-finish.jpg" alt="Antique finish"><div class="product-meta"><h3 class="product-title">Antique Finish</h3><p class="product-subtitle">Classic texture</p></div><div class="product-desc"><p>Timeless antique textures for a rustic and elegant appearance.</p></div></article>
+        <article class="product-card" tabindex="0"><img src="images/reinforcement-mesh.jpg" alt="Reinforcement mesh"><div class="product-meta"><h3 class="product-title">Reinforcement Mesh</h3><p class="product-subtitle">Strength and durability</p></div><div class="product-desc"><p>High-quality mesh for wall reinforcement and crack prevention.</p></div></article>
+        <article class="product-card" tabindex="0"><img src="images/primer.jpg" alt="Primer"><div class="product-meta"><h3 class="product-title">Primer</h3><p class="product-subtitle">Surface preparation</p></div><div class="product-desc"><p>Reliable primers for optimal adhesion and finish quality.</p></div></article>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-block">
         <h3>Contact us</h3>
         <div class="footer-contact">
           <p><strong>Phone:</strong> 1-868-352-0450</p>
-          <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
+          <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#7d0f0e1c11141e12130e090f081e091412133d12080911121216531e1210"><span class="__cf_email__" data-cfemail="384a4b5954515b57564b4c4a4d5b4c51575678574d4c54575753165b5755">[email&#160;protected]</span></a></p>
         </div>
       </div>
       <div class="footer-block">
         <h3>Address</h3>
         <div class="footer-contact">
-          <p>#53B Sookoo Trace, Ceder Hill Road</p>
+          <p>#53B Sookoo Trace, Cedar Hill Road</p>
           <p>Claxton Bay</p>
         </div>
       </div>
@@ -244,5 +109,5 @@
       <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
     </div>
   </footer>
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
