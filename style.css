@@ -102,20 +102,21 @@ body {
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
+  display: inline-block;
 }
 
-/* Product grid */
+/* Product grid (scoped so projects page unaffected) */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5em;
   padding: 2em;
 }
-.product-card {
+.products-grid .product-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 480px; /* ✅ Equal height for all cards */
+  min-height: 480px; /* ✅ Equal height only for products */
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -123,23 +124,23 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-.product-card:hover {
+.products-grid .product-card:hover {
   transform: scale(1.02);
 }
-.product-card img {
+.products-grid .product-card img {
   width: 100%;
   height: auto;
   display: block;
 }
-.product-meta {
+.products-grid .product-meta {
   padding: 1em;
   flex-grow: 1;
 }
-.product-title {
+.products-grid .product-title {
   font-size: 1.2em;
   font-weight: bold;
 }
-.product-subtitle {
+.products-grid .product-subtitle {
   font-size: 0.9em;
   color: #666;
 }
@@ -160,7 +161,7 @@ body {
   padding: 1em;
   border-top: 1px solid #eee;
 }
-.product-card.open .product-desc {
+.products-grid .product-card.open .product-desc {
   display: block;
   max-height: none;   /* ✅ allow full height */
   overflow: visible;  /* ✅ prevent clipping */
@@ -187,6 +188,30 @@ body {
   font-size: 0.85em;
   margin-top: 0.3em;
   color: #444;
+}
+
+/* Social media icons */
+.social-icons {
+  display: flex;
+  gap: 0.8em;
+  margin-top: 1em;
+}
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #444;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.social-icons a:hover {
+  background: #ffd700;
+  color: #222;
 }
 
 /* Footer */
