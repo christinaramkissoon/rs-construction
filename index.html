@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>R&S Ali Construction Ltd.</title>
+  <title>Contact - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <script>
     function toggleSidebar(){
       document.getElementById('sidebar').classList.toggle('show');
@@ -28,12 +30,12 @@
     <img src="images/rs-logo-new.png" class="logo" alt="Logo" />
     <h2>Navigation</h2>
     <ul class="nav-links">
-      <li><a href="index.html" class="active" onclick="closeSidebar()">Home</a></li>
+      <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
       <li><a href="products.html" onclick="closeSidebar()">Products</a></li>
       <li><a href="projects.html" onclick="closeSidebar()">Projects</a></li>
       <li><a href="services.html" onclick="closeSidebar()">Services</a></li>
       <li><a href="about.html" onclick="closeSidebar()">About Us</a></li>
-      <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
+      <li><a href="contact.html" class="active" onclick="closeSidebar()">Contact</a></li>
     </ul>
     <!-- Social media icons -->
     <div class="social-icons">
@@ -46,28 +48,23 @@
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
   <!-- Hero -->
-  <section class="hero" style="background: url('images/project-house4.jpeg') center/cover no-repeat;">
-    <h1>Welcome to R&S Ali Construction Ltd.</h1>
-    <p>Building quality homes and projects with trusted materials and expertise.</p>
-    <!-- ✅ Request a Quote button -->
+  <section class="hero" style="background: url('images/project-house2.jpeg') center/cover no-repeat;">
+    <h1>Contact Us</h1>
+    <p>We’re here to answer your questions and provide quotes.</p>
     <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
   </section>
 
-  <!-- Main content -->
+  <!-- Content -->
   <main>
     <section>
-      <h2>About Us</h2>
-      <p>R&S Ali Construction Ltd. is dedicated to delivering superior construction services, from residential builds to commercial projects. Our team combines craftsmanship with modern techniques to ensure lasting quality.</p>
-    </section>
-
-    <section>
-      <h2>Our Services</h2>
-      <p>We offer a wide range of services including wall finishes, coatings, reinforcement systems, and more. Explore our <a href="services.html">Services</a> page for details.</p>
-    </section>
-
-    <section>
-      <h2>Featured Projects</h2>
-      <p>Take a look at some of our completed works on the <a href="projects.html">Projects</a> page.</p>
+      <h2>Get in Touch</h2>
+      <p>Reach out to us via phone, email, or visit our office during business hours.</p>
+      <div class="footer-contact">
+        <p><strong>Phone:</strong> 1-868-352-0450</p>
+        <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
+        <p><strong>Address:</strong> #53B Sookoo Trace, Cedar Hill Road, Claxton Bay</p>
+        <p><strong>Hours:</strong> Mon - Fri: 8:00 AM - 4:00 PM | Sat: 8:00 AM - 1:00 PM</p>
+      </div>
     </section>
   </main>
 
@@ -84,7 +81,7 @@
       <div class="footer-block">
         <h3>Address</h3>
         <div class="footer-contact">
-          <p>#53B Sookoo Trace, Ceder Hill Road</p>
+          <p>#53B Sookoo Trace, Cedar Hill Road</p>
           <p>Claxton Bay</p>
         </div>
       </div>
