@@ -3,15 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>Services - R&S Ali Construction Ltd.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Reuse your existing quote button class; keep new ones hidden by default */
+    /* Reuse your existing quote button class; keep new ones hidden by default inside cards */
     .quote-btn { display: none; }
     .service-card { cursor: pointer; }
   </style>
 </head>
 <body>
+  <!-- Overlay (for sidebar/menu) -->
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html">R&S Ali Construction Ltd.</a>
+      </div>
+
+      <!-- Mobile menu toggle (if your site uses it) -->
+      <button class="menu-toggle" aria-label="Open menu" onclick="openSidebar()">☰</button>
+
+      <!-- Primary navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sidebar (optional; shown when menu-toggle is clicked) -->
+      <aside id="sidebar" class="sidebar">
+        <button class="close-btn" aria-label="Close menu" onclick="closeSidebar()">×</button>
+        <ul>
+          <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
+          <li><a href="about.html" onclick="closeSidebar()">About</a></li>
+          <li><a href="projects.html" onclick="closeSidebar()">Projects</a></li>
+          <li><a href="products.html" onclick="closeSidebar()">Products</a></li>
+          <li><a href="services.html" class="active" onclick="closeSidebar()">Services</a></li>
+          <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
+        </ul>
+      </aside>
+    </div>
+  </header>
 
   <!-- Hero -->
   <section class="hero">
@@ -152,22 +191,32 @@
     </div>
   </footer>
 
-  <!-- Script -->
+  <!-- Scripts -->
   <script>
-    // Show the quote button for the clicked service card and hide all others
+    // Minimal sidebar controls (so overlay/menu buttons don't error)
+    function openSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      if (sidebar) sidebar.classList.add('open');
+      if (overlay) overlay.classList.add('active');
+    }
+    function closeSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      if (sidebar) sidebar.classList.remove('open');
+      if (overlay) overlay.classList.remove('active');
+    }
+
+    // Show the quote button for the clicked service, hide all others
     document.querySelectorAll('.service-card').forEach(card => {
       card.addEventListener('click', () => {
-        // Hide all buttons (including hero's, then we re-show hero explicitly)
+        // Hide all quote buttons (including hero's)
         document.querySelectorAll('.quote-btn').forEach(btn => {
           btn.style.display = 'none';
         });
         // Show the button in the clicked card
         const btn = card.querySelector('.quote-btn');
         if (btn) btn.style.display = 'inline-block';
-
-        // Ensure the hero's quote button remains visible on initial load only
-        const heroBtn = document.querySelector('.hero .quote-btn');
-        if (heroBtn && !btn) heroBtn.style.display = 'inline-block';
       });
     });
 
