@@ -15,7 +15,52 @@
       document.getElementById('sidebar').classList.remove('show');
       document.getElementById('overlay').classList.remove('show');
     }
+
+    // Lightbox functions
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('show');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('show');
+    }
   </script>
+  <style>
+    /* Lightbox styling */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid #fff;
+      border-radius: 8px;
+    }
+    .lightbox.show {
+      display: flex;
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 20px; right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .projects-grid img {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .projects-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
   <!-- Topbar -->
@@ -58,30 +103,36 @@
       <h2>Project Gallery</h2>
       <div class="projects-grid">
         <!-- Building Projects -->
-        <article class="project-card"><img src="images/project-building1.jpeg" alt="Building project 1"></article>
-        <article class="project-card"><img src="images/project-building2.jpeg" alt="Building project 2"></article>
-        <article class="project-card"><img src="images/project-building3.jpeg" alt="Building project 3"></article>
-        <article class="project-card"><img src="images/project-building4.jpeg" alt="Building project 4"></article>
-        <article class="project-card"><img src="images/project-building5.jpeg" alt="Building project 5"></article>
+        <article class="project-card"><img src="images/project-building1.jpeg" alt="Building project 1" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-building2.jpeg" alt="Building project 2" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-building5.jpeg" alt="Building project 5" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-building6.jpeg" alt="Building project 6" onclick="openLightbox(this.src)"></article>
 
         <!-- House Projects -->
-        <article class="project-card"><img src="images/project-house1.jpeg" alt="House project 1"></article>
-        <article class="project-card"><img src="images/project-house2.jpeg" alt="House project 2"></article>
-        <article class="project-card"><img src="images/project-house3.jpeg" alt="House project 3"></article>
-        <article class="project-card"><img src="images/project-house4.jpeg" alt="House project 4"></article>
-        <article class="project-card"><img src="images/project-house5.jpeg" alt="House project 5"></article>
+        <article class="project-card"><img src="images/project-house1.jpeg" alt="House project 1" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-house2.jpeg" alt="House project 2" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-house3.jpeg" alt="House project 3" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-house4.jpeg" alt="House project 4" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-house5.jpeg" alt="House project 5" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-house6.jpeg" alt="House project 6" onclick="openLightbox(this.src)"></article>
 
         <!-- Indoor Projects -->
-        <article class="project-card"><img src="images/project-indoors1.jpeg" alt="Indoor project 1"></article>
-        <article class="project-card"><img src="images/project-indoors2.jpeg" alt="Indoor project 2"></article>
-        <article class="project-card"><img src="images/project-indoors3.jpeg" alt="Indoor project 3"></article>
-        <article class="project-card"><img src="images/project-indoors4.jpeg" alt="Indoor project 4"></article>
+        <article class="project-card"><img src="images/project-indoor1.jpeg" alt="Indoor project 1" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-indoor2.jpeg" alt="Indoor project 2" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-indoor3.jpeg" alt="Indoor project 3" onclick="openLightbox(this.src)"></article>
+        <article class="project-card"><img src="images/project-indoor4.jpeg" alt="Indoor project 4" onclick="openLightbox(this.src)"></article>
 
         <!-- Roof Project -->
-        <article class="project-card"><img src="images/project-roof1.jpeg" alt="Roof project"></article>
+        <article class="project-card"><img src="images/project-roof1.jpeg" alt="Roof project" onclick="openLightbox(this.src)"></article>
       </div>
     </section>
   </main>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged project">
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
