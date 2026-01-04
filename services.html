@@ -1,163 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services - R&S Ali Construction Ltd.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .quote-btn { display: none; }
-    .service-card { cursor: pointer; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script>
+    function toggleSidebar(){
+      document.getElementById('sidebar').classList.toggle('show');
+      document.getElementById('overlay').classList.toggle('show');
+    }
+    function closeSidebar(){
+      document.getElementById('sidebar').classList.remove('show');
+      document.getElementById('overlay').classList.remove('show');
+    }
+  </script>
 </head>
 <body>
-  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <a href="index.html">R&S Ali Construction Ltd.</a>
-      </div>
-      <button class="menu-toggle" aria-label="Open menu" onclick="openSidebar()">☰</button>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <aside id="sidebar" class="sidebar">
-        <button class="close-btn" aria-label="Close menu" onclick="closeSidebar()">×</button>
-        <ul>
-          <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
-          <li><a href="about.html" onclick="closeSidebar()">About</a></li>
-          <li><a href="projects.html" onclick="closeSidebar()">Projects</a></li>
-          <li><a href="products.html" onclick="closeSidebar()">Products</a></li>
-          <li><a href="services.html" class="active" onclick="closeSidebar()">Services</a></li>
-          <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
-        </ul>
-      </aside>
-    </div>
+  <!-- Topbar -->
+  <header class="topbar">
+    <img src="images/rs-logo-new.png" alt="Logo" />
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
   </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <img src="images/rs-logo-new.png" class="logo" alt="Logo" />
+    <h2>Navigation</h2>
+    <ul class="nav-links">
+      <li><a href="index.html" onclick="closeSidebar()">Home</a></li>
+      <li><a href="products.html" onclick="closeSidebar()">Products</a></li>
+      <li><a href="projects.html" onclick="closeSidebar()">Projects</a></li>
+      <li><a href="services.html" class="active" onclick="closeSidebar()">Services</a></li>
+      <li><a href="about.html" onclick="closeSidebar()">About Us</a></li>
+      <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
+    </ul>
+    <!-- Social media icons -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/r_s_stucco/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/rs.stucco/reels/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/@r_s_stucco" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/18683520450" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
   <!-- Hero -->
   <section class="hero">
     <h1>Our Services</h1>
     <p>Comprehensive construction and maintenance solutions tailored to your needs.</p>
-    <a href="/cdn-cgi/l/email-protection#d0a2a3b1bcb9b3bfbea3a4a2a5b3a4b9bfbe90bfa5a4bcbfbfbbfeb3bfbd" class="quote-btn" style="display:inline-block;">Request a Quote</a>
+    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
   </section>
 
-  <!-- Services -->
+  <!-- Content -->
   <main>
     <section>
       <h2>What We Offer</h2>
       <div class="services-grid">
-
-        <article class="service-card">
-          <img src="images/service-ceiling.jpg" alt="Ceiling Installation">
-          <div class="service-meta">
-            <h3>Ceiling Installation</h3>
-            <p>Durable and stylish ceiling solutions.</p>
-            <a href="/cdn-cgi/l/email-protection#017372606d68626e6f727573746275686e6f416e74756d6e6e6a2f626e6c3e7274636b6462753c50746e756421536470746472753b214264686d686f66243331486f7275606d6d6075686e6f27636e65783c49646d6d6e2d24333148243331766e746d652433316d686a642433316024333170746e7564243331676e732433314264686d686f6621486f7275606d6d6075686e6f2f243331516d64607264243331626e6f756062752433316c6424333160752433315a786e747324333171696e6f642e646c60686d5c2f" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-construction.jpg" alt="Construction">
-          <div class="service-meta">
-            <h3>Construction</h3>
-            <p>Reliable residential and commercial builds.</p>
-            <a href="/cdn-cgi/l/email-protection#aedcddcfc2c7cdc1c0dddadcdbcddac7c1c0eec1dbdac2c1c1c580cdc1c391dddbccc4cbcdda93ffdbc1dacb8efccbdfdbcbddda948eedc1c0dddadcdbcddac7c1c088ccc1cad793e6cbc2c2c1828b9c9ee78b9c9ed9c1dbc2ca8b9c9ec2c7c5cb8b9c9ecf8b9c9edfdbc1dacb8b9c9ec8c1dc8b9c9eedc1c0dddadcdbcddac7c1c0808b9c9efec2cbcfddcb8b9c9ecdc1c0dacfcdda8b9c9ec3cb8b9c9ecfda8b9c9ef5d7c1dbdc8b9c9edec6c1c0cb81cbc3cfc7c2f380" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-maintenance.jpg" alt="Maintenance">
-          <div class="service-meta">
-            <h3>Maintenance</h3>
-            <p>Keeping your property in top condition.</p>
-            <a href="/cdn-cgi/l/email-protection#502223313c39333f3e232422253324393f3e103f25243c3f3f3b7e333f3d6f2325323a3533246d01253f243570023521253523246a701d31393e24353e313e333576323f34296d18353c3c3f7c75626019756260273f253c347562603c393b357562603175626021253f2435756260363f227562601d31393e24353e313e33357e756260003c35312335756260333f3e243133247562603d3575626031247562600b293f252275626020383f3e357f353d31393c0d7e" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-painting.jpg" alt="Painting">
-          <div class="service-meta">
-            <h3>Painting</h3>
-            <p>Professional finishes for interior and exterior walls.</p>
-            <a href="/cdn-cgi/l/email-protection#aad8d9cbc6c3c9c5c4d9ded8dfc9dec3c5c4eac5dfdec6c5c5c184c9c5c795d9dfc8c0cfc9de97fbdfc5decf8af8cfdbdfcfd9de908afacbc3c4dec3c4cd8cc8c5ced397e2cfc6c6c5868f989ae38f989addc5dfc6ce8f989ac6c3c1cf8f989acb8f989adbdfc5decf8f989accc5d88f989afacbc3c4dec3c4cd848f989afac6cfcbd9cf8f989ac9c5c4decbc9de8f989ac7cf8f989acbde8f989af1d3c5dfd88f989adac2c5c4cf85cfc7cbc3c6f784" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-pressurewash.jpg" alt="Pressure Washing">
-          <div class="service-meta">
-            <h3>Pressure Washing</h3>
-            <p>Thorough cleaning for walls, roofs, and driveways.</p>
-            <a href="/cdn-cgi/l/email-protection#1d6f6e7c71747e72736e696f687e697472735d72686971727276337e7270226e687f77787e69204c687269783d4f786c68786e69273d4d6f786e6e686f78382f2d4a7c6e7574737a3b7f72796420557871717231382f2d54382f2d6a72687179382f2d71747678382f2d7c382f2d6c68726978382f2d7b726f382f2d4d6f786e6e686f783d4a7c6e7574737a33382f2d4d71787c6e78382f2d7e7273697c7e69382f2d7078382f2d7c69382f2d466472686f382f2d6d757273783278707c74714033" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-roofing.jpg" alt="Roofing">
-          <div class="service-meta">
-            <h3>Roofing</h3>
-            <p>Installation and repair of durable roofing systems.</p>
-            <a href="/cdn-cgi/l/email-protection#c3b1b0a2afaaa0acadb0b7b1b6a0b7aaacad83acb6b7afacaca8eda0acaefcb0b6a1a9a6a0b7fe92b6acb7a6e391a6b2b6a6b0b7f9e391acaca5aaada4e5a1aca7bafe8ba6afafacefe6f1f38ae6f1f3b4acb6afa7e6f1f3afaaa8a6e6f1f3a2e6f1f3b2b6acb7a6e6f1f3a5acb1e6f1f391acaca5aaada4ede6f1f393afa6a2b0a6e6f1f3a0acadb7a2a0b7e6f1f3aea6e6f1f3a2b7e6f1f398baacb6b1e6f1f3b3abacada6eca6aea2aaaf9eed" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-stucco.jpg" alt="Stucco Application">
-          <div class="service-meta">
-            <h3>Stucco Application</h3>
-            <p>High-quality stucco finishes for lasting appeal.</p>
-            <a href="/cdn-cgi/l/email-protection#f18382909d98929e9f828583849285989e9fb19e84859d9e9e9adf929e9cce8284939b949285cca0849e8594d1a3948084948285cbd1a2858492929ed4c3c1b081819d98929085989e9fd7939e9588ccb9949d9d9eddd4c3c1b8d4c3c1869e849d95d4c3c19d989a94d4c3c190d4c3c180849e8594d4c3c1979e83d4c3c1a2858492929ed1b081819d98929085989e9fdfd4c3c1a19d94908294d4c3c1929e9f85909285d4c3c19c94d4c3c19085d4c3c1aa889e8483d4c3c181999e9f94de949c90989dacdf" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-tiling.jpg" alt="Tiling">
-          <div class="service-meta">
-            <h3>Tiling</h3>
-            <p>Elegant and precise tile installation.</p>
-            <a href="/cdn-cgi/l/email-protection#770504161b1e1418190403050214031e1819371802031b18181c5914181a480402151d1214034a260218031257251206021204034d57231e1b1e1910511518130e4a3f121b1b185b5245473e5245470018021b135245471b1e1c12524547165245470602180312524547111805524547231e1b1e191059524547271b12160412524547141819031614035245471a1252454716035245472c0e180205524547071f18191258121a161e1b2a59" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-transport.jpg" alt="Transport">
-          <div class="service-meta">
-            <h3>Transport</h3>
-            <p>Efficient logistics and material delivery.</p>
-            <a href="/cdn-cgi/l/email-protection#d6a4a5b7babfb5b9b8a5a2a4a3b5a2bfb9b896b9a3a2bab9b9bdf8b5b9bbe9a5a3b4bcb3b5a2eb87a3b9a2b3f684b3a7a3b3a5a2ecf682a4b7b8a5a6b9a4a2f0b4b9b2afeb9eb3babab9faf3e4e69ff3e4e6a1b9a3bab2f3e4e6babfbdb3f3e4e6b7f3e4e6a7a3b9a2b3f3e4e6b0b9a4f3e4e682a4b7b8a5a6b9a4a2f8f3e4e686bab3b7a5b3f3e4e6b5b9b8a2b7b5a2f3e4e6bbb3f3e4e6b7a2f3e4e68dafb9a3a4f3e4e6a6beb9b8b3f9b3bbb7bfba8bf8" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
-        <article class="service-card">
-          <img src="images/service-welding.jpg" alt="Welding">
-          <div class="service-meta">
-            <h3>Welding</h3>
-            <p>Strong and reliable metalwork solutions.</p>
-            <a href="/cdn-cgi/l/email-protection#017372606d68626e6f727573746275686e6f416e74756d6e6e6a2f626e6c3e7274636b6462753c50746e756421536470746472753b2156646d65686f6627636e65783c49646d6d6e2d24333148243331766e746d652433316d686a642433316024333170746e7564243331676e7324333156646d65686f662f243331516d64607264243331626e6f756062752433316c6424333160752433315a786e747324333171696e6f642e646c60686d5c2f" class="quote-btn">Request a Quote</a>
-          </div>
-        </article>
-    
+        <article class="service-card"><img src="images/service-ceiling.jpg" alt="Ceiling Installation"><div class="service-meta"><h3>Ceiling Installation</h3><p>Durable and stylish ceiling solutions.</p></div></article>
+        <article class="service-card"><img src="images/service-construction.jpg" alt="Construction"><div class="service-meta"><h3>Construction</h3><p>Reliable residential and commercial builds.</p></div></article>
+        <article class="service-card"><img src="images/service-maintenance.jpg" alt="Maintenance"><div class="service-meta"><h3>Maintenance</h3><p>Keeping your property in top condition.</p></div></article>
+        <article class="service-card"><img src="images/service-painting.jpg" alt="Painting"><div class="service-meta"><h3>Painting</h3><p>Professional finishes for interior and exterior walls.</p></div></article>
+        <article class="service-card"><img src="images/service-pressurewash.jpg" alt="Pressure Washing"><div class="service-meta"><h3>Pressure Washing</h3><p>Thorough cleaning for walls, roofs, and driveways.</p></div></article>
+        <article class="service-card"><img src="images/service-roofing.jpg" alt="Roofing"><div class="service-meta"><h3>Roofing</h3><p>Installation and repair of durable roofing systems.</p></div></article>
+        <article class="service-card"><img src="images/service-stucco.jpg" alt="Stucco Application"><div class="service-meta"><h3>Stucco Application</h3><p>High-quality stucco finishes for lasting appeal.</p></div></article>
+        <article class="service-card"><img src="images/service-tiling.jpg" alt="Tiling"><div class="service-meta"><h3>Tiling</h3><p>Elegant and precise tile installation.</p></div></article>
+        <article class="service-card"><img src="images/service-transport.jpg" alt="Transport"><div class="service-meta"><h3>Transport</h3><p>Efficient logistics and material delivery.</p></div></article>
+        <article class="service-card"><img src="images/service-welding.jpg" alt="Welding"><div class="service-meta"><h3>Welding</h3><p>Strong and reliable metalwork solutions.</p></div></article>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-block">
         <h3>Contact us</h3>
         <div class="footer-contact">
           <p><strong>Phone:</strong> 1-868-352-0450</p>
-          <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#3a48495b5653595554494e484f594e5355547a554f4e5655555114595557"><span class="__cf_email__" data-cfemail="0f7d7c6e63666c60617c7b7d7a6c7b6660614f607a7b63606064216c6062">[email&#160;protected]</span></a></p>
+          <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
         </div>
       </div>
       <div class="footer-block">
@@ -176,38 +99,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 R&S Ali Construction Ltd. All rights reserved.</p>
+      <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
     </div>
   </footer>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    function openSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      const overlay = document.getElementById('overlay');
-      if (sidebar) sidebar.classList.add('open');
-      if (overlay) overlay.classList.add('active');
-    }
-    function closeSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      const overlay = document.getElementById('overlay');
-      if (sidebar) sidebar.classList.remove('open');
-      if (overlay) overlay.classList.remove('active');
-    }
-
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('click', () => {
-        document.querySelectorAll('.quote-btn').forEach(btn => {
-          btn.style.display = 'none';
-        });
-        const btn = card.querySelector('.quote-btn');
-        if (btn) btn.style.display = 'inline-block';
-      });
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const heroBtn = document.querySelector('.hero .quote-btn');
-      if (heroBtn) heroBtn.style.display = 'inline-block';
-    });
-  </script>
 </body>
 </html>
