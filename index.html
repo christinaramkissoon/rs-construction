@@ -17,21 +17,8 @@
       document.getElementById('overlay').classList.remove('show');
     }
   </script>
-  <style>
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .service-icon {
-      flex: 1 1 20%;
-      min-width: 120px;
-      text-align: center;
-    }
-  </style>
 </head>
-<body>
+<body class="home">
   <!-- Topbar -->
   <header class="topbar">
     <img src="images/rs-logo-new.png" alt="Logo" />
@@ -60,12 +47,12 @@
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
   <!-- Hero -->
-<section class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="images/hero.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</section>
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="images/hero.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
 
   <!-- Main Content -->
   <main>
