@@ -172,14 +172,20 @@ a:hover { text-decoration: underline; }
 /* - Hero (video only, home page only) - */
 .home .hero {
   position: relative;
-  height: 100vh;
+  width: 100%;
+  height: 100vh;       /* full viewport height */
   overflow: hidden;
-  background: none; /* remove image background */
+  margin: 0;
+  padding: 0;
+  background: none;    /* remove image background */
 }
 .home .hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;   /* fills area, keeps aspect ratio */
   display: block;
 }
 
