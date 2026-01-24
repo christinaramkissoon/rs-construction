@@ -174,7 +174,9 @@ a:hover { text-decoration: underline; }
   position: relative;
   width: 100%;
   height: 100vh;   /* fallback */
-  height: 100dvh;  /* dynamic viewport height for mobile */
+  height: 100svh;  /* small viewport height */
+  height: 100lvh;  /* large viewport height */
+  height: 100dvh;  /* dynamic viewport height */
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -283,11 +285,4 @@ section h2 {
   padding: 1.25rem 1rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-}
-.footer-block h3 {
-  margin: 0 0 0.6rem;
-  color: #fff;
-  font-size: 1.05rem;
-}
-.footer-contact p, .footer-hours p
+  grid-template-columns: repeat(
