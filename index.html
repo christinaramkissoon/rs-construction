@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="home">
+<html lang="en">
 <head>
   <link rel="icon" href="favicon.png" type="image/png" />
   <meta charset="UTF-8" />
@@ -16,17 +16,22 @@
       document.getElementById('sidebar').classList.remove('show');
       document.getElementById('overlay').classList.remove('show');
     }
-    // Hero height fix for mobile
-    function resizeHero() {
-      const hero = document.querySelector('.home .hero');
-      if(hero) hero.style.height = window.innerHeight + 'px';
-    }
-    window.addEventListener('resize', resizeHero);
-    window.addEventListener('orientationchange', resizeHero);
-    window.addEventListener('load', resizeHero);
   </script>
+  <style>
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .service-icon {
+      flex: 1 1 20%;
+      min-width: 120px;
+      text-align: center;
+    }
+  </style>
 </head>
-<body class="home">
+<body>
   <!-- Topbar -->
   <header class="topbar">
     <img src="images/rs-logo-new.png" alt="Logo" />
@@ -54,12 +59,14 @@
   </aside>
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
-  <!-- Hero with video only -->
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="images/hero.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <!-- Hero -->
+  <section class="hero" style="background: url('images/project-house1.jpeg') center/cover no-repeat;">
+    <h1>R&S Ali Construction Ltd.</h1>
+    <p>Building Excellence Since 2014 - A Passion for Performance</p>
+    <div class="hero-buttons">
+      <a href="projects.html" class="quote-btn">View Our Portfolio</a>
+      <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
+    </div>
   </section>
 
   <!-- Main Content -->
@@ -99,17 +106,25 @@
         <div class="footer-contact">
           <p><strong>Phone:</strong> 1-868-352-0450</p>
           <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
-          <p><strong>Address:</strong> #53B Sookoo Trace, Cedar Hill Road, Claxton Bay</p>
+        </div>
+      </div>
+      <div class="footer-block">
+        <h3>Address</h3>
+        <div class="footer-contact">
+          <p>#53B Sookoo Trace, Cedar Hill Road</p>
+          <p>Claxton Bay</p>
         </div>
       </div>
       <div class="footer-block">
         <h3>Hours</h3>
-        <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
-        <p>Sat: 8:00 AM - 1:00 PM</p>
+        <div class="footer-hours">
+          <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
+          <p>Sat: 8:00 AM - 1:00 PM</p>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 R&S Ali Construction Ltd. All rights reserved.
+      <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
     </div>
   </footer>
 </body>
