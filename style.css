@@ -135,7 +135,7 @@ a:hover { text-decoration: underline; }
   pointer-events: auto;
 }
 
-/* - Hero - */
+/* - Hero (default for other pages) - */
 .hero {
   position: relative;
   min-height: 46vh;
@@ -144,7 +144,6 @@ a:hover { text-decoration: underline; }
   text-align: center;
   color: #fff;
   padding: 3.5rem 1rem;
-  /* Default background to unify hero across all pages */
   background: url('images/project-house1.jpeg') center/cover no-repeat;
 }
 .hero::after {
@@ -168,6 +167,20 @@ a:hover { text-decoration: underline; }
 .hero p {
   font-size: clamp(1rem, 1.6vw, 1.15rem);
   margin: 0 0 1rem;
+}
+
+/* - Hero (video only, home page only) - */
+.home .hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: none; /* remove image background */
+}
+.home .hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* - Main layout - */
@@ -275,28 +288,3 @@ section h2 {
 img { max-width: 100%; }
 
 /* - Responsive - */
-@media (max-width: 1024px) {
-  .projects-grid, .products-grid, .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .footer-inner {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .projects-grid, .products-grid, .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .footer-inner {
-    grid-template-columns: 1fr;
-  }
-  .sidebar { width: 86vw; left: -86vw; }
-  .hero { min-height: 40vh; padding: 2.5rem 1rem; }
-  .project-card img, .product-card img, .service-card img { height: 180px; }
-}
-
-/* - Accessibility - */
-.hamburger:focus, .social-icons a:focus, .nav-links a:focus, .quote-btn:focus {
-  outline: 3px solid #B8860B;
-  outline-offset: 2px;
-}
