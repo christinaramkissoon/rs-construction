@@ -294,6 +294,7 @@ section h2 {
 img { max-width: 100%; }
 
 /* - Responsive - */
-@media (max-width: 768px) {
-  .home .hero {
-    height: 100dvh; /* dynamic viewport height for tablets/phones */
+@media (max-width: 900px) {
+  .projects-grid,
+  .products-grid,
+  .services-grid {
