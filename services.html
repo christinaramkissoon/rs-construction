@@ -7,8 +7,6 @@
   <title>Services - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     .quote-btn { display: none; }
     .hero .quote-btn { display: inline-block; }
@@ -27,13 +25,13 @@
 </head>
 <body>
   <!-- Topbar -->
-  <header class="topbar" data-aos="fade-down">
+  <header class="topbar">
     <img src="images/rs-logo-new.png" alt="Logo" />
     <div class="hamburger" onclick="toggleSidebar()">☰</div>
   </header>
 
   <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar" data-aos="fade-right">
+  <aside class="sidebar" id="sidebar">
     <img src="images/rs-logo-new.png" class="logo" alt="Logo" />
     <h2>Navigation</h2>
     <ul class="nav-links">
@@ -44,7 +42,7 @@
       <li><a href="about.html" onclick="closeSidebar()">About Us</a></li>
       <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
     </ul>
-    <div class="social-icons" data-aos="fade-up">
+    <div class="social-icons">
       <a href="https://www.instagram.com/r_s_stucco/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/rs.stucco/reels/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.tiktok.com/@r_s_stucco" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -54,62 +52,153 @@
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
   <!-- Hero -->
-  <section class="hero" data-aos="fade-up">
-    <h1 data-aos="zoom-in">Our Services</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Comprehensive construction and maintenance solutions tailored to your needs.</p>
-    <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: General&body=Hello, I would like a quote. Please contact me at [your phone/email]." class="quote-btn" data-aos="fade-up" data-aos-delay="400">Request a Quote</a>
+  <section class="hero">
+    <h1>Our Services</h1>
+    <p>Comprehensive construction and maintenance solutions tailored to your needs.</p>
+    <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: General&body=Hello, I would like a quote. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
   </section>
 
   <!-- Content -->
   <main>
-    <section data-aos="fade-up">
+    <section>
       <h2>What We Offer</h2>
       <div class="services-grid">
-        <!-- Each service card animates in with staggered delay -->
-        <article class="service-card" data-aos="zoom-in"><img src="images/service-stucco.jpg" alt="Stucco Application"><div class="service-meta"><h3>Stucco Application</h3><p>High-quality stucco finishes for lasting appeal.</p><a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Stucco Application&body=Hello, I would like a quote for Stucco Application. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a></div></article>
 
-        <article class="service-card" data-aos="zoom-in" data-aos-delay="100"><img src="images/service-granite.jpg" alt="Granite"><div class="service-meta"><h3>Granite</h3><p>Timeless granite surfaces that combine strength and elegance for any space.</p><a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Granite&body=Hello, I would like a quote for Granite. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a></div></article>
-
-        <article class="service-card" data-aos="zoom-in" data-aos-delay="200"><img src="images/service-construction.jpg" alt="Construction"><div class="service-meta"><h3>Construction</h3><p>Reliable residential and commercial builds.</p><a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Construction&body=Hello, I would like a quote for Construction. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a></div></article>
-
-        <!-- Continue same pattern for all other service cards -->
-        <!-- ... -->
+        <article class="service-card">
+          <img src="images/service-ceiling.jpg" alt="Ceiling Installation">
+          <div class="service-meta">
+            <h3>Ceiling Installation</h3>
+            <p>Durable and stylish ceiling solutions.</p>
+           <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Ceiling Installation&body=Hello, I would like a quote for Ceiling Installation. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-construction.jpg" alt="Construction">
+          <div class="service-meta">
+            <h3>Construction</h3>
+            <p>Reliable residential and commercial builds.</p>
+            <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Construction&body=Hello, I would like a quote for Construction. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+            </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-maintenance.jpg" alt="Maintenance">
+          <div class="service-meta">
+            <h3>Maintenance</h3>
+            <p>Keeping your property in top condition.</p>
+            <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Maintenance&body=Hello, I would like a quote for Maintenance. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-painting.jpg" alt="Painting">
+          <div class="service-meta">
+            <h3>Painting</h3>
+            <p>Professional finishes for interior and exterior walls.</p>
+            <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Painting&body=Hello, I would like a quote for Painting. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-pressurewash.jpg" alt="Pressure Washing">
+          <div class="service-meta">
+            <h3>Pressure Washing</h3>
+            <p>Thorough cleaning for walls, roofs, and driveways.</p>
+            <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Pressure Washing&body=Hello, I would like a quote for Pressure Washing. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-roofing.jpg" alt="Roofing">
+          <div class="service-meta">
+            <h3>Roofing</h3>
+            <p>Installation and repair of durable roofing systems.</p>
+            <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Roofing&body=Hello, I would like a quote for Roofing. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-stucco.jpg" alt="Stucco Application">
+          <div class="service-meta">
+            <h3>Stucco Application</h3>
+            <p>High-quality stucco finishes for lasting appeal.</p>
+            <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Stucco Application&body=Hello, I would like a quote for Stucco Application. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-tiling.jpg" alt="Tiling">
+          <div class="service-meta">
+            <h3>Tiling</h3>
+            <p>Elegant and precise tile installation.</p>
+            <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Tiling&body=Hello, I would like a quote for Tiling. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-transport.jpg" alt="Transport">
+          <div class="service-meta">
+            <h3>Transport</h3>
+            <p>Efficient logistics and material delivery.</p>
+            <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Transport&body=Hello, I would like a quote for Transport. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
+        <article class="service-card">
+          <img src="images/service-welding.jpg" alt="Welding">
+          <div class="service-meta">
+            <h3>Welding</h3>
+            <p>Strong and reliable metalwork solutions.</p>
+           <a href="mailto:rsaliconstruction@outlook.com?subject=Quote Request: Welding&body=Hello, I would like a quote for Welding. Please contact me at [your phone/email]." class="quote-btn">Request a Quote</a>
+          </div>
+        </article>
+    
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" data-aos="fade-up">
-    <div class="footer-inner">
-      <div class="footer-block">
-        <h3>Contact us</h3>
-        <div class="footer-contact">
-          <p><strong>Phone:</strong> 1-868-352-0450</p>
-          <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
-          <p><strong>Address:</strong> #53B Sookoo Trace, Cedar Hill Road, Claxton Bay</p>
-        </div>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-block">
+      <h3>Contact us</h3>
+      <div class="footer-contact">
+        <p><strong>Phone:</strong> 1-868-352-0450</p>
+        <p><strong>Email:</strong> 
+          <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a>
+        </p>
       </div>
-      <div class="footer-block">
-        <h3>Hours</h3>
+    </div>
+    <div class="footer-block">
+      <h3>Address</h3>
+      <div class="footer-contact">
+        <p>#53B Sookoo Trace, Cedar Hill Road</p>
+        <p>Claxton Bay</p>
+      </div>
+    </div>
+    <div class="footer-block">
+      <h3>Hours</h3>
+      <div class="footer-hours">
         <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
         <p>Sat: 8:00 AM - 1:00 PM</p>
       </div>
-      <div class="footer-block">
-        <h3>About</h3>
-        <p>Trusted construction and stucco specialists in Trinidad & Tobago.</p>
-      </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 R&S Ali Construction Ltd. All rights reserved.
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
+  </div>
+</footer>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.quote-btn').forEach(btn => {
+          if (!btn.closest('.hero')) btn.style.display = 'none';
+        });
+        const btn = card.querySelector('.quote-btn');
+        if (btn) btn.style.display = 'inline-block';
+      });
     });
   </script>
 </body>
