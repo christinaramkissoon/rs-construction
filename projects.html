@@ -6,6 +6,10 @@
   <title>Projects - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
   <script>
     function toggleSidebar(){
       document.getElementById('sidebar').classList.toggle('show');
@@ -58,27 +62,87 @@
       <h2>Project Gallery</h2>
       <div class="projects-grid">
         <!-- Building Projects -->
-        <article class="project-card"><img src="images/project-building1.jpeg" alt="Building project 1"></article>
-        <article class="project-card"><img src="images/project-building2.jpeg" alt="Building project 2"></article>
-        <article class="project-card"><img src="images/project-building3.jpeg" alt="Building project 5"></article>
-        <article class="project-card"><img src="images/project-building5.jpeg" alt="Building project 6"></article>
+        <article class="project-card">
+          <a href="images/project-building1.jpeg" data-lightbox="projects" data-title="Building project 1">
+            <img src="images/project-building1.jpeg" alt="Building project 1">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-building2.jpeg" data-lightbox="projects" data-title="Building project 2">
+            <img src="images/project-building2.jpeg" alt="Building project 2">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-building3.jpeg" data-lightbox="projects" data-title="Building project 3">
+            <img src="images/project-building3.jpeg" alt="Building project 3">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-building5.jpeg" data-lightbox="projects" data-title="Building project 5">
+            <img src="images/project-building5.jpeg" alt="Building project 5">
+          </a>
+        </article>
 
         <!-- House Projects -->
-        <article class="project-card"><img src="images/project-house1.jpeg" alt="House project 1"></article>
-        <article class="project-card"><img src="images/project-house2.jpeg" alt="House project 2"></article>
-        <article class="project-card"><img src="images/project-house3.jpeg" alt="House project 3"></article>
-        <article class="project-card"><img src="images/project-house4.jpeg" alt="House project 4"></article>
-        <article class="project-card"><img src="images/project-house5.jpeg" alt="House project 5"></article>
-        <article class="project-card"><img src="images/project-house6.jpeg" alt="House project 6"></article>
+        <article class="project-card">
+          <a href="images/project-house1.jpeg" data-lightbox="projects" data-title="House project 1">
+            <img src="images/project-house1.jpeg" alt="House project 1">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-house2.jpeg" data-lightbox="projects" data-title="House project 2">
+            <img src="images/project-house2.jpeg" alt="House project 2">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-house3.jpeg" data-lightbox="projects" data-title="House project 3">
+            <img src="images/project-house3.jpeg" alt="House project 3">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-house4.jpeg" data-lightbox="projects" data-title="House project 4">
+            <img src="images/project-house4.jpeg" alt="House project 4">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-house5.jpeg" data-lightbox="projects" data-title="House project 5">
+            <img src="images/project-house5.jpeg" alt="House project 5">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-house6.jpeg" data-lightbox="projects" data-title="House project 6">
+            <img src="images/project-house6.jpeg" alt="House project 6">
+          </a>
+        </article>
 
         <!-- Indoor Projects -->
-        <article class="project-card"><img src="images/project-indoors1.jpeg" alt="Indoor project 1"></article>
-        <article class="project-card"><img src="images/project-indoors2.jpeg" alt="Indoor project 2"></article>
-        <article class="project-card"><img src="images/project-indoors3.jpeg" alt="Indoor project 3"></article>
-        <article class="project-card"><img src="images/project-indoors4.jpeg" alt="Indoor project 4"></article>
+        <article class="project-card">
+          <a href="images/project-indoors1.jpeg" data-lightbox="projects" data-title="Indoor project 1">
+            <img src="images/project-indoors1.jpeg" alt="Indoor project 1">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-indoors2.jpeg" data-lightbox="projects" data-title="Indoor project 2">
+            <img src="images/project-indoors2.jpeg" alt="Indoor project 2">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-indoors3.jpeg" data-lightbox="projects" data-title="Indoor project 3">
+            <img src="images/project-indoors3.jpeg" alt="Indoor project 3">
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="images/project-indoors4.jpeg" data-lightbox="projects" data-title="Indoor project 4">
+            <img src="images/project-indoors4.jpeg" alt="Indoor project 4">
+          </a>
+        </article>
 
         <!-- Roof Project -->
-        <article class="project-card"><img src="images/project-roof1.jpeg" alt="Roof project"></article>
+        <article class="project-card">
+          <a href="images/project-roof1.jpeg" data-lightbox="projects" data-title="Roof project">
+            <img src="images/project-roof1.jpeg" alt="Roof project">
+          </a>
+        </article>
       </div>
     </section>
   </main>
@@ -93,24 +157,10 @@
           <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
         </div>
       </div>
-      <div class="footer-block">
-        <h3>Address</h3>
-        <div class="footer-contact">
-          <p>#53B Sookoo Trace, Cedar Hill Road</p>
-          <p>Claxton Bay</p>
-        </div>
-      </div>
-      <div class="footer-block">
-        <h3>Hours</h3>
-        <div class="footer-hours">
-          <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
-          <p>Sat: 8:00 AM - 1:00 PM</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
