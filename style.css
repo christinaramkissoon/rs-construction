@@ -111,6 +111,7 @@ a:hover { text-decoration: underline; }
     rgba(0,0,0,0.35),
     rgba(0,0,0,0.35)
   );
+  pointer-events: none; /* ✅ Fix: overlay no longer blocks clicks */
 }
 .hero h1,
 .hero p,
@@ -201,13 +202,5 @@ img { max-width: 100%; }
   }
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-@media (max-width: 600px) {
-  .projects-grid, .products-grid {
-    grid-template-columns: 1fr;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
   }
 }
