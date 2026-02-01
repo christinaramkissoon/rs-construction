@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="favicon.png" type="image/png" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script>
     function toggleSidebar(){
       document.getElementById('sidebar').classList.toggle('show');
@@ -22,13 +19,13 @@
 </head>
 <body>
   <!-- Topbar -->
-  <header class="topbar" data-aos="fade-down">
+  <header class="topbar">
     <img src="images/rs-logo-new.png" alt="Logo" />
     <div class="hamburger" onclick="toggleSidebar()">☰</div>
   </header>
 
   <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar" data-aos="fade-right">
+  <aside class="sidebar" id="sidebar">
     <img src="images/rs-logo-new.png" class="logo" alt="Logo" />
     <h2>Navigation</h2>
     <ul class="nav-links">
@@ -39,7 +36,7 @@
       <li><a href="about.html" class="active" onclick="closeSidebar()">About Us</a></li>
       <li><a href="contact.html" onclick="closeSidebar()">Contact</a></li>
     </ul>
-    <div class="social-icons" data-aos="fade-up">
+    <div class="social-icons">
       <a href="https://www.instagram.com/r_s_stucco/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/rs.stucco/reels/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.tiktok.com/@r_s_stucco" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -49,20 +46,20 @@
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
   <!-- Hero -->
-  <section class="hero" style="background: url('images/project-house1.jpeg') center/cover no-repeat;" data-aos="fade-up">
-    <h1 data-aos="zoom-in">About Us</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Building Excellence Since 2014 - A Passion for Performance</p>
-    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn" data-aos="fade-up" data-aos-delay="400">Request a Quote</a>
+  <section class="hero" style="background: url('images/project-house1.jpeg') center/cover no-repeat;">
+    <h1>About Us</h1>
+    <p>Building Excellence Since 2014 - A Passion for Performance</p>
+    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
   </section>
 
   <!-- Main Content -->
   <main>
-    <section data-aos="fade-up">
+    <section>
       <h2>Company History</h2>
-      <p>From humble beginnings, R&S Ali Construction Ltd was founded in 2014 by Mr. Daniel Ali, a seasoned professional with 16 years of hands-on experience and vision in the construction industry. More than a decade later, supported by a skilled and dedicated team, the company has successfully completed projects across Trinidad, Tobago, and Guyana; delivering exceptional quality in residential, commercial, and educational developments.</p>
+      <p>R&S Ali Construction Ltd. was founded in 2014 by Mr. Daniel Ali, a seasoned professional with over 16 years of experience in the construction industry. Since its inception, the company has successfully completed projects across Trinidad, Tobago, and Guyana, delivering exceptional quality in residential, commercial, and educational spaces.</p>
     </section>
 
-    <section data-aos="fade-up" data-aos-delay="200">
+    <section>
       <h2>Vision & Mission</h2>
       <p><strong>“A Passion for Performance.”</strong> This guiding principle drives us to exceed client expectations while maintaining cost-effectiveness and quality. We are solution-minded, performance-driven, and customer-focused.</p>
       <p>Our four-phase approach ensures continuous improvement and client satisfaction:</p>
@@ -74,7 +71,7 @@
       </ul>
     </section>
 
-    <section data-aos="fade-up" data-aos-delay="400">
+    <section>
       <h2>Corporate Responsibility</h2>
       <p>We are committed to upholding the highest standards in Environment, Health, and Safety (EHS). Our policies emphasize:</p>
       <ul>
@@ -85,45 +82,40 @@
       </ul>
     </section>
 
-    <section data-aos="fade-up" data-aos-delay="600">
+    <section>
       <h2>Our Commitment</h2>
       <p>Over the years, we have successfully delivered projects across residential, commercial, and educational spaces. We continue to earn repeat and referral business by focusing on quality, timeliness, and service-minded attitudes.</p>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" data-aos="fade-up">
+  <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-block">
         <h3>Contact us</h3>
         <div class="footer-contact">
           <p><strong>Phone:</strong> 1-868-352-0450</p>
           <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
-          <p><strong>Address:</strong> #53B Sookoo Trace, Cedar Hill Road, Claxton Bay</p>
+        </div>
+      </div>
+      <div class="footer-block">
+        <h3>Address</h3>
+        <div class="footer-contact">
+          <p>#53B Sookoo Trace, Cedar Hill Road</p>
+          <p>Claxton Bay</p>
         </div>
       </div>
       <div class="footer-block">
         <h3>Hours</h3>
-        <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
-        <p>Sat: 8:00 AM - 1:00 PM</p>
-      </div>
-      <div class="footer-block">
-        <h3>About</h3>
-        <p>Trusted construction and stucco specialists in Trinidad & Tobago.</p>
+        <div class="footer-hours">
+          <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
+          <p>Sat: 8:00 AM - 1:00 PM</p>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 R&S Ali Construction Ltd. All rights reserved.
+      <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  </script>
 </body>
 </html>
