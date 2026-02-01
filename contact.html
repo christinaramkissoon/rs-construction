@@ -7,6 +7,8 @@
   <title>Contact - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script>
     function toggleSidebar(){
       document.getElementById('sidebar').classList.toggle('show');
@@ -20,13 +22,13 @@
 </head>
 <body>
   <!-- Topbar -->
-  <header class="topbar">
+  <header class="topbar" data-aos="fade-down">
     <img src="images/rs-logo-new.png" alt="Logo" />
     <div class="hamburger" onclick="toggleSidebar()">☰</div>
   </header>
 
   <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
+  <aside class="sidebar" id="sidebar" data-aos="fade-right">
     <img src="images/rs-logo-new.png" class="logo" alt="Logo" />
     <h2>Navigation</h2>
     <ul class="nav-links">
@@ -38,7 +40,7 @@
       <li><a href="contact.html" class="active" onclick="closeSidebar()">Contact</a></li>
     </ul>
     <!-- Social media icons -->
-    <div class="social-icons">
+    <div class="social-icons" data-aos="fade-up">
       <a href="https://www.instagram.com/r_s_stucco/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/rs.stucco/reels/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.tiktok.com/@r_s_stucco" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -48,18 +50,18 @@
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
   <!-- Hero -->
-  <section class="hero">
-    <h1>Contact Us</h1>
-    <p>Let's chat! We’re here to answer your questions.</p>
-    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn">Request a Quote</a>
+  <section class="hero" data-aos="fade-up">
+    <h1 data-aos="zoom-in">Contact Us</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Let's chat! We’re here to answer your questions.</p>
+    <a href="mailto:rsaliconstruction@outlook.com" class="quote-btn" data-aos="fade-up" data-aos-delay="400">Request a Quote</a>
   </section>
 
   <!-- Content -->
   <main>
-    <section>
+    <section data-aos="fade-up">
       <h2>Get in Touch</h2>
       <p>Reach out to us via phone, email, or visit our office.</p>
-      <div class="footer-contact">
+      <div class="footer-contact" data-aos="fade-up" data-aos-delay="200">
         <p><strong>Phone:</strong> 1-868-352-0450</p>
         <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
         <p><strong>Address:</strong> #53B Sookoo Trace, Cedar Hill Road, Claxton Bay</p>
@@ -69,33 +71,38 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" data-aos="fade-up">
     <div class="footer-inner">
       <div class="footer-block">
         <h3>Contact us</h3>
         <div class="footer-contact">
           <p><strong>Phone:</strong> 1-868-352-0450</p>
           <p><strong>Email:</strong> <a href="mailto:rsaliconstruction@outlook.com">rsaliconstruction@outlook.com</a></p>
-        </div>
-      </div>
-      <div class="footer-block">
-        <h3>Address</h3>
-        <div class="footer-contact">
-          <p>#53B Sookoo Trace, Cedar Hill Road</p>
-          <p>Claxton Bay</p>
+          <p><strong>Address:</strong> #53B Sookoo Trace, Cedar Hill Road, Claxton Bay</p>
         </div>
       </div>
       <div class="footer-block">
         <h3>Hours</h3>
-        <div class="footer-hours">
-          <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
-          <p>Sat: 8:00 AM - 1:00 PM</p>
-        </div>
+        <p>Mon - Fri: 8:00 AM - 4:00 PM</p>
+        <p>Sat: 8:00 AM - 1:00 PM</p>
+      </div>
+      <div class="footer-block">
+        <h3>About</h3>
+        <p>Trusted construction and stucco specialists in Trinidad & Tobago.</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 R&S Ali Construction Ltd. All rights reserved.</p>
+      &copy; 2026 R&S Ali Construction Ltd. All rights reserved.
     </div>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 </html>
