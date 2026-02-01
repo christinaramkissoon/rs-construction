@@ -6,10 +6,6 @@
   <title>Projects - R&S Ali Construction Ltd.</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Lightbox2 CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
-
   <script>
     function toggleSidebar(){
       document.getElementById('sidebar').classList.toggle('show');
@@ -20,6 +16,42 @@
       document.getElementById('overlay').classList.remove('show');
     }
   </script>
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #000;
+    }
+    .close {
+      position: absolute;
+      top: 20px; right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover { color: #ccc; }
+    #caption {
+      margin: 15px auto;
+      text-align: center;
+      color: #ccc;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
   <!-- Topbar -->
@@ -62,95 +94,38 @@
       <h2>Project Gallery</h2>
       <div class="projects-grid">
         <!-- Building Projects -->
-        <article class="project-card">
-          <a href="images/project-building1.jpeg" data-lightbox="projects" data-title="Building project 1">
-            <img src="images/project-building1.jpeg" alt="Building project 1">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-building2.jpeg" data-lightbox="projects" data-title="Building project 2">
-            <img src="images/project-building2.jpeg" alt="Building project 2">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-building3.jpeg" data-lightbox="projects" data-title="Building project 3">
-            <img src="images/project-building3.jpeg" alt="Building project 3">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-building5.jpeg" data-lightbox="projects" data-title="Building project 5">
-            <img src="images/project-building5.jpeg" alt="Building project 5">
-          </a>
-        </article>
+        <article class="project-card"><img src="images/project-building1.jpeg" alt="Building project 1" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-building2.jpeg" alt="Building project 2" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-building3.jpeg" alt="Building project 3" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-building5.jpeg" alt="Building project 5" onclick="openModal(this)"></article>
 
         <!-- House Projects -->
-        <article class="project-card">
-          <a href="images/project-house1.jpeg" data-lightbox="projects" data-title="House project 1">
-            <img src="images/project-house1.jpeg" alt="House project 1">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-house2.jpeg" data-lightbox="projects" data-title="House project 2">
-            <img src="images/project-house2.jpeg" alt="House project 2">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-house3.jpeg" data-lightbox="projects" data-title="House project 3">
-            <img src="images/project-house3.jpeg" alt="House project 3">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-house4.jpeg" data-lightbox="projects" data-title="House project 4">
-            <img src="images/project-house4.jpeg" alt="House project 4">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-house5.jpeg" data-lightbox="projects" data-title="House project 5">
-            <img src="images/project-house5.jpeg" alt="House project 5">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-house6.jpeg" data-lightbox="projects" data-title="House project 6">
-            <img src="images/project-house6.jpeg" alt="House project 6">
-          </a>
-        </article>
-         <article class="project-card">
-          <a href="images/project-house7.jpeg" data-lightbox="projects" data-title="House project 7">
-            <img src="images/project-house7.jpeg" alt="House project 7">
-          </a>
-        </article>
+        <article class="project-card"><img src="images/project-house1.jpeg" alt="House project 1" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-house2.jpeg" alt="House project 2" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-house3.jpeg" alt="House project 3" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-house4.jpeg" alt="House project 4" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-house5.jpeg" alt="House project 5" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-house6.jpeg" alt="House project 6" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-house7.jpeg" alt="House project 7" onclick="openModal(this)"></article>
 
         <!-- Indoor Projects -->
-        <article class="project-card">
-          <a href="images/project-indoors1.jpeg" data-lightbox="projects" data-title="Indoor project 1">
-            <img src="images/project-indoors1.jpeg" alt="Indoor project 1">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-indoors2.jpeg" data-lightbox="projects" data-title="Indoor project 2">
-            <img src="images/project-indoors2.jpeg" alt="Indoor project 2">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-indoors3.jpeg" data-lightbox="projects" data-title="Indoor project 3">
-            <img src="images/project-indoors3.jpeg" alt="Indoor project 3">
-          </a>
-        </article>
-        <article class="project-card">
-          <a href="images/project-indoors4.jpeg" data-lightbox="projects" data-title="Indoor project 4">
-            <img src="images/project-indoors4.jpeg" alt="Indoor project 4">
-          </a>
-        </article>
+        <article class="project-card"><img src="images/project-indoors1.jpeg" alt="Indoor project 1" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-indoors2.jpeg" alt="Indoor project 2" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-indoors3.jpeg" alt="Indoor project 3" onclick="openModal(this)"></article>
+        <article class="project-card"><img src="images/project-indoors4.jpeg" alt="Indoor project 4" onclick="openModal(this)"></article>
 
         <!-- Roof Project -->
-        <article class="project-card">
-          <a href="images/project-roof1.jpeg" data-lightbox="projects" data-title="Roof project">
-            <img src="images/project-roof1.jpeg" alt="Roof project">
-          </a>
-        </article>
+        <article class="project-card"><img src="images/project-roof1.jpeg" alt="Roof project" onclick="openModal(this)"></article>
       </div>
     </section>
   </main>
+
+  <!-- Modal -->
+  <div id="imgModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -165,7 +140,15 @@
     </div>
   </footer>
 
-  <!-- Lightbox2 JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    function openModal(img) {
+      document.getElementById("imgModal").style.display = "block";
+      document.getElementById("modal-img").src = img.src;
+      document.getElementById("caption").innerHTML = img.alt;
+    }
+    function closeModal() {
+      document.getElementById("imgModal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
